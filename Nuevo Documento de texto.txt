@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20261030-04-cb63f40","C":{"ABeeZee":"YADK31-VBBc,1","Abel":"YAHO2Ehol3g,0","Abhaya Libre":"YAFdJvwa-l0,0","Abril Fatface":"YACgEZbkUVE,0","Aclonica":"YAHO2OEKYj0,0","Acme":"YAHO2Gflqzo,0","Actor":"YAHO2N0IV_4,0","Adamina":"YAHO2Ko8ddg,0","Advent Pro":"YAFdJvNZdCk,0","Afacad":"YAHO2HaK_fU,0","Afacad Flux":"YAHO2DjbA6Y,0","Agrandir":"YAFdJpYuLss,0","Aileron":"YAFdJn5d8s0,0","Akshar":"YAGWNF0jApg,0","Alata":"YAD1aLikJo8,0","Albert Sans":"YAHO2HRfeh4,0","Alegreya":"YAFdJs07v-8,0","Alegreya Sans":"YAFdJvgJ5TU,0","Alegreya Sans SC":"YAFdJuaTEaM,0","Alegreya SC":"YACgEen8jXo,0","Aleo":"YAFdJg_txOU,0","Alex Brush":"YAE2gr0Mbng,0","Alexandria":"YAGVt-AWBcU,0","Alfa Slab One":"YACgEYS9sJU,0","Alice":"YALBszUSD-E,0","Allison":"YAG5KfE49h8,0","Allura":"YACgEap1YR0,0","Almarai":"YAFdJuZe0mI,0","Alumni Sans":"YAHO2DByoho,0","Amaranth":"YACgEaBTFMQ,0","Amatic SC":"YACgEbSBm0k,0","Amiri":"YAEWgjWFb1M,0","Amiri Quran":"YAHO2Enz6cg,0","Amita":"YADK309xYYo,1","Andika":"YACkoFAye4w,0","Anek Bangla":"YAGVuloYrvI,0","Anek Gujarati":"YAHO2NTD_LM,0","Anek Latin":"YAHO2C6lVnU,0","Anek Telugu":"YAHO2KVu8lI,0","Anonymous Pro":"YACgEV9owk4,0","Antic Slab":"YAHO2HJeTP0,0","Anton":"YACgEcYqQ-A,0","Antonio":"YAFdJjZxcpY,0","Anuphan":"YAHO2IhZ4E0,0","Anybody":"YAHO2MTsics,0","Aptos":"YAGi2jFvvq4,1","Arapey":"YADK32AK2Uk,1","Architects Daughter":"YACgEc9BFCs,0","Archivo":"YAHO2-t-jNE,0","Archivo Black":"YACgEZulLoA,0","Archivo Narrow":"YACgEa-oJH8,0","Aref Ruqaa":"YAHO2NMqGdM,0","Arial":"YAGyDvJ_4Ts,0","Arimo":"YACgEZ1cb1Q,0","Arsenal":"YADK3_DWcOc,0","Arvo":"YACgEf17hXM,0","Asap":"YAFdJr0OaFw,0","Asap Condensed":"YAD1fmY3NpE,0","Assistant":"YAFdtfahXt8,0","Atkinson Hyperlegible":"YAFge7Z-F6s,0","Atkinson Hyperlegible Next":"YAHO2IeQVB0,0","Audiowide":"YAHO2MsoafU,0","Avenir":"YAFcfmNq6UY,0","Azeret Mono":"YAHO2EIdDP0,0","Bacasime Antique":"YAHO2JjJq4o,0","Bad Script":"YADK31ojH6A,1","Bagel Fat One":"YAFyG3A11Bw,0","Bai Jamjuree":"YAFdJjI5olU,0","Baloo 2":"YAHO2IcQUcM,0","Baloo Bhaijaan 2":"YAHO2NwTj3Y,0","Baloo Da 2":"YAHO2LicHPY,0","Balsamiq Sans":"YAE3C_w4eo8,0","Bangers":"YAD5qTdjGKo,1","Barlow":"YAFdJsyuOPM,1","Barlow Condensed":"YAFdJljEuFc,0","Barlow Semi Condensed":"YAFdJu55qXI,0","Baskervville":"YAHO2JTYNKo,0","Beau Rivage":"YAHO2NDDGu0,0","Bebas Neue":"YACgESME5ew,0","Belanosima":"YAHO2KW8vyU,0","Bellefair":"YADSJ8TFXwA,0","Belleza":"YADK3w_fTc4,0","BenchNine":"YAHO2Gl7yMc,0","Berkshire Swash":"YACgEa7uPMI,0","Besley":"YAHO2BTXWYc,0","Bevan":"YACkoDaMIbc,0","Big Shoulders Display":"YAFdJs8L2aw,0","Birthstone":"YAGXhLyeE6I,0","Biryani":"YAFdtZ_PRAs,0","Bitter":"YACkoOF0Xck,0","BIZ UDPGothic":"YAGWY3VAK4Q,0","Black Ops One":"YACgEaY4FIU,0","Blinker":"YAFdJoBYX9o,0","Bodoni Moda":"YAHO2C7VUJE,0","Bowlby One":"YAHO2EunPos,0","Bowlby One SC":"YAHO2J38FUs,0","Bree Serif":"YACkoD1yZN0,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Bubblegum Sans":"YAHO2JdFc_U,0","Bungee":"YALBszL9wLA,0","Bungee Shade":"YACkoPYyrRk,0","Cabin":"YAFdJnEgsb0,0","Cabin Condensed":"YAHO2F-FVVw,0","Cairo":"YAFdtXpDzlQ,0","Caladea":"YAD1hHx0kVU,0","Calistoga":"YAD1aIFxe3I,1","Cambria":"YAFcfgNlM2Y,0","Cantarell":"YAHO2LSCGX4,0","Canva Sans":"YAFdJjTk5UU,1","Canva Sans Display":"YAFTjyMT8Hc,0","Caprasimo":"YAHO2PYTkbo,0","Capriola":"YALBs4liG7k,0","Cardo":"YACkoGIT9qo,0","Carlito":"YACkoIZXsrc,0","Carter One":"YACgEZJ1Flw,0","Castoro":"YAHO2cDcmVM,0","Catamaran":"YAFdJhPTLAc,0","Caveat":"YALBs2ploWQ,0","Caveat Brush":"YALBs8ZVRhw,0","Chakra Petch":"YAD1fCkY3IQ,0","Changa":"YAFdJtbG8fw,0","Changa One":"YAHO2WdsbtM,0","Chango":"YADK37RW0po,0","Charis SIL":"YAGvf-G3GGU,0","Charm":"YAD1b_s4o-w,0","Chelsea Market":"YAHO2UOd5sY,0","Chewy":"YACgEZfALnA,0","Chivo":"YAHO2WvGfDs,0","Chivo Mono":"YAHO2Qd3y5g,0","Chonburi":"YALBsz_RTwU,0","Cinzel":"YACgEeV8bIQ,0","Cinzel Decorative":"YAEe9XbWpNs,0","Climate Crisis":"YAFdJnbiwgQ,0","Comfortaa":"YAFdJoWmhxU,0","Comic Neue":"YAHO2VMiyZo,0","Commissioner":"YAHO2RRI-KE,0","Concert One":"YAFyG1vOkaw,0","Consolas":"YAFcfu6YYdE,0","Cookie":"YAHO2TxA9Mk,0","Cormorant Garamond":"YAFdJhX-538,0","Cormorant Infant":"YAHO2cgbXjc,0","Cormorant SC":"YAFdJg7KuRM,0","Cormorant Unicase":"YAHO2b4ohVo,0","Courgette":"YACgEU5nS9M,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","Cousine":"YADK35VyDYU,0","Crete Round":"YAHO2Uu9SvI,0","Crimson Pro":"YAFdJsEGkW0,0","Crimson Text":"YAHO2RsfBzg,0","Cuprum":"YACkoB3fESg,0","Cutive Mono":"YAHO2cov6H4,0","Damion":"YAHO2SxDErM,0","Dancing Script":"YALBs2pfuW0,0","Darker Grotesque":"YAD1acp_tgc,1","DejaVu Sans":"YAFdtfpl0Yc,0","Delius":"YAHO2f1B8B4,0","Dhurjati":"YAHO2RElIME,0","Didact Gothic":"YALBs-mIj2o,0","DM Mono":"YAHO2SGpw0w,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Domine":"YAHO2bbCOA4,0","Dongle":"YAGXDU1dmuc,0","Doppio One":"YAHO2ckhWaI,0","Dosis":"YAFdte3F-n0,1","DotGothic16":"YAHO2fxQNHM,0","DynaPuff":"YAFyMRnxBDs,0","East Sea Dokdo":"YAHO2V39uyM,0","Eater":"YAHO2VpLF0c,0","EB Garamond":"YAFdJtfMD6Y,0","Economica":"YACgEeIOo5w,0","Eczar":"YAFdJrnVElk,0","Edo":"YADoUIDNzaE,1","El Messiri":"YAFdJoZarj8,0","Encode Sans":"YAHO2R-vLyo,0","Encode Sans Condensed":"YAHO2RQWhbg,0","Epilogue":"YAHO2WWHRqI,0","Exo":"YACgEf2dbI4,0","Exo 2":"YAFdJor4M6A,1","Fahkwang":"YAFdJp0SJos,0","Familjen Grotesk":"YAHO2ZriIzU,0","Faustina":"YAFdJnqy8Oc,0","Figtree":"YAHO2b-mV7A,0","Fira Code":"YAFdJsxBlTg,0","Fira Mono":"YAHO2bTKfjg,0","Fira Sans":"YAFdJnJKOPE,0","Fira Sans Condensed":"YAHMLJN-FcA,0","Fira Sans Extra Condensed":"YAHMLGqUb6Q,0","Fjalla One":"YAHO2VMyTKw,0","Fondamento":"YAHO2X_okmA,0","Forum":"YACgEcnnqB4,0","Fragment Mono":"YAHO2ZlYXZc,0","Francois One":"YADK3zbC6RM,0","Frank Ruhl Libre":"YAFdJiGIKxQ,0","Fraunces":"YAFdJpU7Kkk,0","Fredoka":"YACgEZml080,0","Fugaz One":"YAHO2f5L5K0,0","Funnel Display":"YAHO2TmVuEs,0","Funnel Sans":"YAHO2R0FK5U,0","Futura":"YAFcfgcNhWk,3","Gabarito":"YAHO2cD3JmI,0","Gaegu":"YAFdJj615Ls,0","Gantari":"YAHO2WveuBo,0","Garamond":"YAFcfhlhK9c,0","Geist":"YAHO2SfKS30,0","Geist Mono":"YAHO2XOe8v8,0","Gelasio":"YAHO2e426-k,0","Gentium Book Plus":"YAHO2b-adyU,0","Geologica":"YAHMLpZ3y5c,0","Geom":"YAHMLFz7unQ,0","Georama":"YAHO21l9KR8,0","Georgia":"YAGzXkO0pEM,0","GFS Didot":"YADK39vXpyU,0","Gilda Display":"YADK34sD2QM,0","Gilroy":"YAFcf0f10mQ,0","Gloock":"YAHO2WVhd0Q,0","Gloria Hallelujah":"YALBs50JjRs,0","Gochi Hand":"YACgEWWPgRQ,0","Goldman":"YAHO2TATES8,0","Golos Text":"YAHO2QlqAQk,0","Google Sans":"YAHO2dYZ4Uw,0","Google Sans Code":"YAHO2XdQwlA,0","Google Sans Flex":"YAHO2e8mtck,0","Gotham":"YAFcfr0ZwUA,0","Goudy Bookletter 1911":"YAHO2X7CqQQ,0","Gowun Batang":"YAGXDQtk-ic,0","Gowun Dodum":"YAGXDZ921io,0","Graduate":"YACgEajwz7Y,0","Grandstander":"YAHO2bN2hd8,0","Gravitas One":"YAHO2WtqHRw,0","Great Vibes":"YACgEX27qLg,0","Grenze":"YAFdJpFWOZM,0","Gruppo":"YACgEbcz8MU,0","Gudea":"YAHO2WlVs30,0","Hahmlet":"YAGXDTqs4Ac,0","Hammersmith One":"YACgEWNFnT4,0","Handlee":"YAHO2U9C-xI,0","Hanken Grotesk":"YAHO2VB9G0I,0","Heebo":"YAFdJqqaebw,0","Helvetica":"YAFcf7zkXN0,0","Hind Guntur":"YAFdJq1FbIc,0","Hind Madurai":"YAFdJtsMgQk,0","Hind Siliguri":"YAFdJodBWQk,0","Hind Vadodara":"YAFdJrnuAas,0","HK Grotesk":"YAFdJsjyMsM,0","Homemade Apple":"YADK3zBTjLs,0","Host Grotesk":"YAHO2VztvdY,0","Hubot Sans":"YAHO2cDVt0E,0","Huninn":"YAHO2dG1YxU,0","Ibarra Real Nova":"YAD1aDS1Jq8,0","IBM Plex Mono":"YAFdJkmvhGI,0","IBM Plex Sans":"YAFdJgT0SHI,0","IBM Plex Sans Arabic":"YAGVuEYCNg0,1","IBM Plex Sans Condensed":"YAFdJrPBof8,0","IBM Plex Sans JP":"YAGWY6rvaqo,0","IBM Plex Sans KR":"YAGXDbUrwEo,0","IBM Plex Sans Thai":"YAFdJkdZC28,0","IBM Plex Serif":"YAFdJt16xgA,0","IM Fell English":"YAHO2QB0QVo,0","IM Fell English SC":"YACgERmrc6I,0","IM Fell French Canon":"YAHO2bMvABs,0","Impact":"YAFcfnjI7Vk,0","Inclusive Sans":"YAGzRvSP2H0,0","Inconsolata":"YAHO2SpO-5g,0","Indie Flower":"YAHO2aaUih8,0","Instrument Sans":"YAHO2bKyaSQ,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Inter Tight":"YAHO2Wv04Hw,0","Istok Web":"YAHO2XNFLkI,0","Italiana":"YAHO2Toik_w,0","Italianno":"YADK33wZXP4,1","Itim":"YAE0Z3ly4AQ,0","Jacques Francois":"YAHO2a5g66Q,0","Jersey 10":"YAHO2QXCPBA,0","Jersey 25":"YAHO2b0HdSo,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Josefin Slab":"YACgEQmaEIc,0","Jost":"YAHO2TSelXg,0","Jua":"YADK3-gZSDU,0","Julius Sans One":"YACgET-7cBI,0","Jura":"YAFdJmtyccY,0","Kaisei Decol":"YAGWY5xJxfk,0","Kalam":"YAFdJrEg2ic,0","Kanit":"YAHO2TvSf7E,0","Kantumruy Pro":"YAHO2SVqwqY,0","Karla":"YAHO2V2NSXM,0","Kaushan Script":"YACgEbGmrJs,0","Khand":"YAFdJm18w3g,0","Khula":"YAFdJvaOkWI,0","Kiwi Maru":"YAFdJmm1njU,0","Klee One":"YAHO2dadxts,0","Knewave":"YACgEYSBEEA,0","Kodchasan":"YAFdJmfmzeo,0","Kosugi Maru":"YAEhL82apSM,0","Krub":"YAFdJl9ACwk,0","Kumbh Sans":"YAHO2UjzjpM,0","La Belle Aurore":"YAHO2QKdLHU,0","Lalezar":"YACkoB188Y0,0","Lato":"YAFdJuFCnaw,0","League Gothic":"YACgEZ1OEPI,0","League Spartan":"YACgEcnJpjs,0","Leckerli One":"YAGX4ddZAAg,0","Lemonada":"YAFdtQVfQCk,0","Lexend":"YAHO2SCkHoU,0","Lexend Deca":"YAD9UdTHECk,0","Lexend Exa":"YAD9UUZHL7I,0","Lexend Giga":"YAD9UYAqrOc,0","Lexend Mega":"YAD9UdrjgZw,0","Lexend Zetta":"YAD9UYrErMw,0","Libre Baskerville":"YACgEUFdPdA,0","Libre Bodoni":"YAHO2fbN094,0","Libre Caslon Display":"YAHO2XhLmt0,0","Libre Caslon Text":"YAHO2USylHk,0","Libre Franklin":"YAFdJr3SNlU,1","Lilita One":"YACgEblklxo,0","Limelight":"YACgEUpkTXE,0","LINE Seed JP":"YAHO2d8yXa4,0","Literata":"YAD1b0SpOHQ,0","Lobster":"YAD8SnSjSFI,0","Lobster Two":"YACgEesdoec,0","Londrina Solid":"YAFdJnyMeQE,0","Lora":"YACgEXvxf8Q,0","Luckiest Guy":"YADK4PnlFRs,0","Lusitana":"YAHO2SveFfM,0","LXGW WenKai TC":"YAHO2ehQ5_o,0","M PLUS 1p":"YAHO2fozO7I,0","M PLUS 2":"YAHO2RUGZcQ,0","Ma Shan Zheng":"YAD1b3yES34,0","Mada":"YAFd-HxC1Y0,0","Maitree":"YAFdJh4v5pY,0","Mali":"YAFdJh7OuNE,0","Manrope":"YAHO2b2feC4,0","Mansalva":"YAD1aZCCYU8,1","Marcellus":"YADK4L2nGbg,0","Marck Script":"YALBs9DBETo,0","Martel":"YAFdtY7FRH8,1","Martian Mono":"YAHO2YhUMkk,0","Mate":"YAHO2eaPuMk,0","Maven Pro":"YAFdJgCyb_c,0","Mea Culpa":"YAHO2UQx4WU,0","MedievalSharp":"YAHO2XoH9qQ,0","Megrim":"YACgEQu0pLY,0","Meiryo":"YAGmJPEz0BM,0","Merienda":"YAGXhISLJkY,0","Merriweather":"YACgEXvHxxs,0","Merriweather Sans":"YAFdJorZgto,1","Michroma":"YADK4IYX8vY,0","Mitr":"YAFdJh-DKf0,0","Mona Sans":"YAHO2XGz2BM,0","Monda":"YADK34lACd0,1","Monoton":"YALBs_hWWG8,0","Mont":"YAFdJgul-2U,0","Montserrat":"YAFdtQi73Xs,0","Montserrat Alternates":"YAHO2d5URdI,0","Mooli":"YAHO2QudnvU,0","More Sugar":"YAFdJkVWBPo,1","Mountains of Christmas":"YAHO2f6R-YA,0","Mr Dafoe":"YACgEbw4BXM,0","Mrs Saint Delafield":"YAHO2Tnt53k,0","Ms Madi":"YAHO2SBc4rI,0","Mukta":"YAFdJjsZaSM,0","Muli":"YAFdtZAC0Mk,0","Mulish":"YAHO28rytyw,0","Nanum Myeongjo":"YAFdJqiu4VY,0","Neucha":"YAEkTBQffFg,0","Neuton":"YAFdtcDBvdA,0","New Rocker":"YAHO2YI8rWg,0","News Cycle":"YACkoEMGWek,0","Nothing You Could Do":"YAHO2WqRm_c,0","Noticia Text":"YACkoDm0xlE,0","Noto Color Emoji":"YAGumpcTCok,0","Noto Kufi Arabic":"YACkoGW2dTA,0","Noto Naskh Arabic":"YACkoI8Oj1c,0","Noto Nastaliq Urdu":"YAGU_Q5u0w4,0","Noto Sans":"YACkoCjjZNk,0","Noto Sans Bengali":"YAFdJjnhMdI,0","Noto Sans Devanagari":"YAFdJnKmmqM,0","Noto Sans Display":"YAHO2eyZBeY,0","Noto Sans Ethiopic":"YAHO20DfUMM,0","Noto Sans Georgian":"YACkoFKxqWs,0","Noto Sans HK":"YAHO2fCytzw,0","Noto Sans JP":"YAFdJiHXlcI,0","Noto Sans Khmer":"YACkoFdRIJM,0","Noto Sans KR":"YAGsojZj-RQ,0","Noto Sans Lao":"YAHO2f6jVpw,0","Noto Sans Lao Looped":"YAHO2TSQjpA,0","Noto Sans Malayalam":"YACkoMzSo98,0","Noto Sans Mono":"YAHO2TFVtN0,0","Noto Sans Myanmar":"YACkoPHEdMk,0","Noto Sans SC":"YAHO2hDCDFM,0","Noto Sans Sinhala":"YACkoJiU_Ak,0","Noto Sans Symbols":"YAHO2n0Zh0w,0","Noto Sans Tamil":"YAHO2r9jkew,0","Noto Sans TC":"YAHO2pzGHBE,0","Noto Sans Telugu":"YAHO2uFAQs4,0","Noto Serif":"YACkoGNq-XY,0","Noto Serif Bengali":"YAGVuu_j8c8,0","Noto Serif Devanagari":"YAGWNWUpY9s,0","Noto Serif Display":"YAFdJllHsUM,0","Nunito":"YAFdJoNRMmU,1","Nunito Sans":"YAFdtQJYB9w,1","Old Standard TT":"YAHO2lhtDcg,0","Oleo Script":"YACgEQQ14jI,0","Onest":"YAHO2kaArOY,0","Open Sans":"YAFdJt8dAY0,1","Open Sans Condensed":"YAD7Rf0lmm4,1","Open Sans Hebrew":"YAFdJlARYMY,0","Optima":"YAFcf0Fltlg,0","Orbit":"YAFyMQm0Z54,0","Orbitron":"YAHO2tXXH_o,0","Oswald":"YACgEQY10lw,0","Outfit":"YAHO2nVlg14,0","Overpass":"YAFdJhmdIMM,1","Oxanium":"YAHO2kINDn0,0","Oxygen":"YAHO2nOU31A,0","Pacifico":"YADLjORQ1u4,0","Pangolin":"YADK4DH4-fM,0","Parisienne":"YACgERSYqTw,0","Parkinsans":"YAHO2j-ZSEo,0","Passion One":"YAFdJo9cFec,0","Pathway Gothic One":"YACkoMQo7Mc,0","Patrick Hand":"YAHO2swKcgg,0","Patua One":"YAHO2qRZWLE,0","Paytone One":"YALBs8J6By4,0","Permanent Marker":"YACgEcB-r-s,0","Petrona":"YADK4PUbnVg,1","Philosopher":"YAEkTCvkg7Q,0","Pinyon Script":"YACgEQzTJgs,0","Pirata One":"YALBs3j2Xx0,0","Pixelify Sans":"YAHO2v5ARTA,0","Play":"YADK4EFto8o,0","Playball":"YAHO2hWLQJ0,0","Playfair Display":"YAFdJhem5V8,1","Playfair Display SC":"YACgESE7eJQ,0","Playwrite VN":"YAHO2_bSM7Y,0","Plus Jakarta Sans":"YAHO2gdhi18,0","Poiret One":"YAHO2nweLas,0","Pontano Sans":"YAHO2t91rWw,0","Poppins":"YAFdJjbTu24,1","Prata":"YACgES4qGnk,0","Press Start 2P":"YAFyGr-8pmQ,0","Pridi":"YAFdJmJ3gqA,0","Prompt":"YAFdJmA6sOY,0","Proxima Nova":"YAFcfjveRFU,0","Proxima Nova Condensed":"YAFcfiSm_SA,0","Proza Libre":"YAHO2nv0NKc,0","PT Mono":"YAHO2lnK_7w,0","PT Sans":"YACgEYbsV-E,0","PT Sans Caption":"YAHO2oZpTQc,0","PT Sans Narrow":"YAHO2glZymI,0","PT Serif":"YACgEcU7Qg4,0","Public Sans":"YAFdJj8NdaU,1","Pyidaungsu":"YACkoGGC7sA,0","Quantico":"YAHO2me4bVc,0","Quattrocento":"YACgEcL5b3s,0","Quattrocento Sans":"YAHO2vuaC0Y,0","Questrial":"YADK4LSvvyE,1","Quicksand":"YAFdJpYtCxE,1","Racing Sans One":"YACgEbcqMPM,0","Radio Canada":"YAHO2qxyljs,0","Radio Canada Big":"YAHO2r7P8wg,0","Rajdhani":"YAFdJoWaWgo,0","Raleway":"YAFdJhmxbVQ,1","Ramabhadra":"YACkoN_hhSs,0","Rammetto One":"YAHO2nAqWuQ,0","Rasa":"YAFdJg-9rGY,0","Readex Pro":"YAGVt3RBO3c,0","Recursive":"YAHO2oZn01g,0","Red Hat Display":"YAD1bzs0p0Y,0","Red Hat Mono":"YAHO2gB0kV8,0","Red Hat Text":"YAHO21kkNWg,0","Reddit Sans":"YAHO2kKAR-8,0","Reem Kufi":"YADSJ0ceOYQ,0","Reenie Beanie":"YAHO2s4qTnk,0","Rethink Sans":"YAHO2q9_FzY,0","Righteous":"YAHO2oo4-So,0","Roboto":"YACgEev4gKc,0","Roboto Condensed":"YACgEan-tYE,0","Roboto Flex":"YAHO2nqK4E8,0","Roboto Mono":"YAFdJkvp3-k,0","Roboto Slab":"YAFdJswIKAg,0","Rock Salt":"YAHO2vFSVxE,0","Rockwell":"YAFcfyVZnN0,0","Rokkitt":"YAFdJnlBl3o,0","Ropa Sans":"YACkoCA_LhY,0","Rowdies":"YAFyL2wl4FI,0","Rozha One":"YACkoMIfZVA,0","Rubik":"YAFdJsMWVVc,0","Rubik Dirt":"YAFyHRD_ZDY,0","Rubik Mono One":"YAHO2qtMuC0,0","Rubik Wet Paint":"YAHO2mLD_X0,0","Ruda":"YAFdJuuBNyM,1","Rye":"YACgEdQP21k,0","Sacramento":"YACgEf5ivwU,0","Saira":"YAFdJk33d3s,0","Saira Condensed":"YAFdJuBuAxg,0","Saira Extra Condensed":"YAFdJiQUvWc,0","Saira Semi Condensed":"YAHO2gfd5g8,0","Saira Stencil One":"YAD1aV1l2HE,0","Sanchez":"YACgEbBJLy8,0","Sarabun":"YAFdJssSnME,0","Sarala":"YADK4LF5xeY,0","Satisfy":"YACgEf5XTk0,0","Sawarabi Mincho":"YAD1faq7yjk,0","Scheherazade New":"YAHO2sxcjiY,0","Schibsted Grotesk":"YAHO2sWydRk,0","Segoe Script":"YAF3uTF1s5I,0","Segoe UI":"YAHNdRD1Klw,0","Sen":"YAHO2h5vrRE,0","Shadows Into Light":"YAHO2tztN1k,0","Share Tech":"YAHO2q4NPs0,0","Share Tech Mono":"YAHO2oHio98,0","Shippori Mincho":"YAGWZNRJkO8,0","Shippori Mincho B1":"YAGWZJnXF8c,0","Shrikhand":"YACkoEA0Kc0,0","Signika":"YACgEfiK7GI,0","Signika Negative":"YAHO2rWYEng,0","Silkscreen":"YAHO2rdlQ_o,0","Skranji":"YAHO2uPivlQ,0","Slabo 13px":"YAHO2hvaP1I,0","Slabo 27px":"YAHO2n--yeE,0","Smooch Sans":"YAHO2tPdb20,0","Sniglet":"YACgEUJSCy8,0","Sofia":"YAHO2kq3qHg,0","Sofia Sans":"YAHMLUINeco,0","Sofia Sans Condensed":"YAHMLQmSo-Y,0","Sofia Sans Extra Condensed":"YAHMLV0fp0c,0","Sora":"YAHO2rDTR1E,0","Sorts Mill Goudy":"YADK4Fi0R2c,0","Source Code Pro":"YAHO2tzIJbg,0","Source Sans 3":"YAG4lO1Mj10,0","Source Sans Pro":"YACgEQzTv38,0","Source Serif Pro":"YACgEfdj394,0","Space Grotesk":"YAHO2sjPCSM,0","Space Mono":"YADW1-vpsoc,0","Special Elite":"YACgEYVlm9Q,0","Special Gothic Expanded One":"YAHO2oaS0m0,0","Spectral":"YAHO2rVUHIM,0","Spline Sans":"YAHO2rZC9CE,0","Squada One":"YADK4PDlAAM,0","Sriracha":"YALBs4sJbXs,0","Staatliches":"YAD1bzJCL-s,0","Stardos Stencil":"YADK4Mu_Xj0,1","STIX Two Text":"YAHO2joycuk,0","Suez One":"YACkoJMi7_c,0","Syncopate":"YAHO2iXpgDY,0","Syne":"YAHML9oLRPc,0","Tahoma":"YAFcfipOFgg,0","Tajawal":"YAFdJg45t1g,0","Tangerine":"YADK4L8oUVI,0","Taviraj":"YAFdJjquxqU,0","Teko":"YAFdJsF6lbU,0","Tektur":"YAHMLdkk1tM,0","Tenor Sans":"YACgEVY5j_w,0","Tilt Warp":"YAHO2uqld84,0","Times New Roman":"YAGzXW3gftg,0","Tinos":"YACkoJyNZF4,0","Tiro Bangla":"YAGVuiG7jnE,0","Tiro Devanagari Hindi":"YAGWNCjUq0o,0","Titan One":"YAHO2v8eA3A,0","Titillium Web":"YAFdtTOE9xo,0","Tomorrow":"YAFdJlW65k4,0","Traditional Arabic":"YAGLszSchGc,0","Trebuchet MS":"YAFcfrglpVA,0","Trocchi":"YACgEV-yq04,0","Turret Road":"YAHO2pKQLYQ,0","Ubuntu":"YACgERDU--Q,0","Ubuntu Condensed":"YAHO2nCaahY,0","Ubuntu Mono":"YAHO2g6B-Uo,0","Ubuntu Sans":"YAHO2kypvWc,0","Ultra":"YACgEWHSPx0,0","Unbounded":"YAHO2rkdmWY,0","Unica One":"YALBs74Pdjc,0","UnifrakturCook":"YAHO2srzKxY,0","UnifrakturMaguntia":"YACgEZRHDPA,0","Unna":"YADK4PtOh7E,0","Urbanist":"YAHO2o1IFy0,0","Varela":"YAHO2gPi4IU,0","Varela Round":"YALBs2IK6rw,0","Vazirmatn":"YAHO2z1lH5c,0","Verdana":"YAGzXTctYtQ,0","Vidaloka":"YACgEdRnAX0,0","Viga":"YAHO2v8Lzbg,0","Volkhov":"YAHO2uWq-qg,0","Vollkorn":"YAFdJli9wSA,0","VT323":"YACgEYI9BCI,0","Wix Madefor Display":"YAHO2o-Qfis,0","Wix Madefor Text":"YAHO2rU16Qc,0","Work Sans":"YAGXhLOKv44,0","Yanone Kaffeesatz":"YAFdtbpuM0E,0","Yantramanav":"YAFdJuZAcfY,0","Yatra One":"YACkoJ228Ho,0","Yellowtail":"YACgEYG4kG4,0","Yeseva One":"YALBs4GWnJw,0","Ysabeau":"YAHMLjcdG48,0","Ysabeau Office":"YAHO2uUYDYI,0","Yuji Boku":"YAFGHcN5e_Y,0","Yusei Magic":"YAEhL8RNAMk,0","Zain":"YAHO2lC1Xkw,0","Zalando Sans":"YAHO2k5OK-M,0","Zalando Sans Expanded":"YAHO2h6OPds,0","Zen Kaku Gothic Antique":"YAHO2u8F_xk,0","Zen Kaku Gothic New":"YAHO2tS_yps,0","Zen Maru Gothic":"YAFdJgMrcdw,0","Zen Old Mincho":"YAHO2tMwaEs,0","Zeyada":"YAHO2lP62P0,0","Zilla Slab":"YAFdJpPotmI,0"}}');</script><script src="/_sdk/640c2c9485552aa0.telemetry_sdk.js" integrity="sha512-x7sJNwBS9reCVXham9nBdUp9EtXT/bbNZQpT1cWbDa+n6qr1jm8WdBMFUK+gVfm5CtLZVOtKSGRXT0C+rD4Hdw=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Library — Northstar</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#FAFAF7;--white:#FFFFFF;--ink:#252525;--muted:#777777;--line:#E7E7E2;--accent:#FFD928}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--paper)}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+    .app-shell{width:100%;min-height:calc(100 * min(var(--vh, 1vh), 1vh));display:flex}
+    .sidebar{width:238px;flex:none;background:#fff;border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:calc(100 * min(var(--vh, 1vh), 1vh));position:sticky;top:0;height:calc(100 * min(var(--vh, 1vh), 1vh));z-index:30;transition:width .2s}
+    .sidebar.collapsed{width:72px}
+    .sidebar.collapsed .sidebar-copy,.sidebar.collapsed .workspace-chevron,.sidebar.collapsed .nav-label,.sidebar.collapsed .user-copy{display:none}
+    .sidebar.collapsed .nav-item{justify-content:center}
+    .sidebar.collapsed .workspace-button{justify-content:center}
+    .sidebar.collapsed .user-card{justify-content:center}
+    .main-shell{flex:1;min-width:0;display:flex;flex-direction:column}
+    .topbar{height:68px;flex:none;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:18px}
+    .workspace-area{display:flex;min-width:0;flex:1}
+    .content-area{flex:1;min-width:0;padding:39px 38px 70px}
+    .details{width:320px;flex:none;background:#fff;border-left:1px solid var(--line);padding:28px 25px;min-height:calc(100 * min(var(--vh, 1vh), 1vh)) - 68px);overflow:auto}
+    .details.is-hidden{display:none}
+    .icon-button{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:8px;background:transparent;color:#666;flex:none}
+    .icon-button:hover,.soft-button:hover{background:#F4F4F2}
+    .icon-button svg,.nav-item svg,.button-icon svg{width:17px;height:17px;stroke-width:1.8}
+    .nav-item{width:100%;display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;color:#666;background:transparent;border:0;text-align:left;white-space:nowrap;font-size:13px;font-weight:500}
+    .nav-item:hover{background:#F7F7F6;color:var(--ink)}
+    .nav-item.active{background:#FFF3A6;color:var(--accent);font-weight:700}
+    .section-caption{color:#A0A0A0;font-size:10px;letter-spacing:.11em;font-weight:700;text-transform:uppercase}
+    .sidebar-divider{height:1px;background:var(--line);margin:19px 12px}
+    .workspace-button{width:100%;display:flex;align-items:center;gap:10px;padding:7px;border:1px solid var(--line);border-radius:9px;background:white;text-align:left}
+    .workspace-button:hover{background:#fafafa}
+    .brand-mark{width:30px;height:30px;border-radius:7px;background:#FFD928;color:#252525;display:grid;place-items:center;font-size:16px;font-weight:700;flex:none}
+    .avatar{height:30px;width:30px;border-radius:50%;display:grid;place-items:center;background:#EAE7E1;color:#5C544C;font-size:11px;font-weight:700;flex:none}
+    .soft-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:12px;font-weight:600;color:#555;white-space:nowrap}
+    .primary-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#FFD928;border:1px solid #FFD928;color:#252525;border-radius:8px;padding:10px 15px;font-size:12px;font-weight:700;white-space:nowrap}
+    .primary-button:hover{background:#F4B400}
+    .search-wrap{position:relative;max-width:310px;width:100%}
+    .search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:#969696}
+    .search-wrap input{width:100%;height:36px;background:#F7F7F6;border:1px solid #EEEEEC;border-radius:8px;padding:0 12px 0 37px;color:var(--ink);font-size:12px}
+    .search-wrap input::placeholder{color:#999}
+    .tabs{display:flex;gap:26px;overflow-x:auto;border-bottom:1px solid var(--line);scrollbar-width:none}
+    .tab{padding:14px 1px 15px;background:none;border:none;border-bottom:2px solid transparent;color:#828282;font-size:12px;font-weight:600;white-space:nowrap}
+    .tab.active{color:var(--accent);border-color:var(--accent)}
+    .library-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:visible}
+    .table-scroll{overflow-x:auto}
+    table{border-collapse:collapse;width:100%;min-width:720px;text-align:left}
+    th{color:#969696;font-size:10px;font-weight:700;letter-spacing:.055em;text-transform:uppercase;padding:15px 12px;background:#FCFCFB;border-bottom:1px solid var(--line);white-space:nowrap}
+    td{padding:16px 12px;border-bottom:1px solid #F0F0EE;font-size:12px;color:#666;white-space:nowrap}
+    tr:last-child td{border-bottom:none}
+    tbody tr{cursor:pointer}
+    tbody tr:hover{background:#FAFAFD}
+    tbody tr.selected{background:#FFF3A6}
+    .document-icon{width:36px;height:36px;display:grid;place-items:center;background:#F2F3F6;border:1px solid #ECEEF1;border-radius:7px;color:#F4B400;flex:none}
+    .document-icon svg{width:17px;height:17px;stroke-width:1.7}
+    .status-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 8px;border-radius:5px;font-size:11px;font-weight:600}
+    .status-dot{height:6px;width:6px;border-radius:50%;background:currentColor}
+    .status-Draft{background:#F2F2F1;color:#737373}.status-In-Review{background:#F5F0E5;color:#947344}
+    .status-Scheduled{background:#EDF1F9;color:#64779D}.status-Published{background:#EAF3EC;color:#5B8369}
+    .view-btn.active{background:#FFF3A6;color:var(--accent)}
+    .popup{position:absolute;z-index:60;right:0;top:calc(100% + 7px);min-width:174px;padding:5px;background:white;border:1px solid var(--line);border-radius:9px;box-shadow:0 12px 30px #25252514}
+    .popup button{display:block;width:100%;text-align:left;padding:9px 10px;border:0;border-radius:5px;background:transparent;color:#444;font-size:12px}
+    .popup button:hover{background:#F5F5F3}
+    .field{width:100%;border:1px solid var(--line);border-radius:8px;background:white;padding:10px 11px;color:var(--ink);font-size:13px}
+    .field-label{display:block;font-size:11px;font-weight:700;color:#555;margin-bottom:7px}
+    .grid-card{border:1px solid var(--line);border-radius:9px;background:#fff;padding:17px;text-align:left;cursor:pointer}
+    .grid-card:hover,.grid-card.selected{border-color:#A8B0D5;background:#FBFBFE}
+    .calendar-cell{min-height:116px;padding:10px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+    .calendar-item{width:100%;text-align:left;padding:5px 6px;border-radius:5px;background:#F0F1F8;color:#FFD928;font-size:10px;margin-top:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .modal-backdrop{position:fixed;inset:0;background:#20212470;display:grid;place-items:center;z-index:100;padding:20px}
+    .modal-card{background:#fff;border-radius:13px;width:min(100%,480px);padding:26px;box-shadow:0 20px 60px #0002}
+    .hidden{display:none!important}
+    .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:120;background:#202124;color:white;padding:10px 16px;border-radius:8px;font-size:12px}
+    @media(max-width:1200px){.details{width:280px}.content-area{padding:30px 25px}}
+    @media(max-width:950px){.workspace-area{display:block}.details{width:100%;min-height:0;border-left:0;border-top:1px solid var(--line)}.content-area{padding:26px 22px}.topbar{padding:0 22px}}
+    @media(max-width:700px){.sidebar{position:fixed;left:0;top:0;transform:translateX(-100%);width:238px!important;box-shadow:10px 0 40px #0001}.sidebar.mobile-open{transform:translateX(0)}.sidebar.collapsed .sidebar-copy,.sidebar.collapsed .workspace-chevron,.sidebar.collapsed .nav-label,.sidebar.collapsed .user-copy{display:block}.sidebar.collapsed .nav-item,.sidebar.collapsed .workspace-button,.sidebar.collapsed .user-card{justify-content:flex-start}.topbar{height:auto;min-height:62px;padding:10px 16px;flex-wrap:wrap}.topbar .search-wrap{order:3;max-width:none;width:100%}.content-area{padding:25px 16px}.mobile-menu{display:inline-flex!important}.desktop-collapse{display:none!important}.heading-actions{width:100%}.heading-actions .primary-button{flex:1}.toolbar{align-items:flex-start!important;flex-wrap:wrap}.toolbar-right{width:100%;justify-content:space-between}}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/8fed440c6f94b5da.data_sdk.js" type="text/javascript" integrity="sha512-hrvcCCJ6nkL5gG3mdqPDbgyAf9a/fg/zBF51sU5N3rM1WmeSu8K36+6wn9TZeAZrLIonoaPBeVyFsXxXxZjq0w=="></script>
+  <script src="/_sdk/dc9eaed14b563eb8.editing_sdk.js" type="text/javascript" integrity="sha512-U1pSpFrQ86eOO8lqZ1xWYnEMHIYQODbWTwR3Q90z8aWFeEUSJieZRq+g7FYNvauPQ0rG84s3SFjWyB/NxzRXNA=="></script>
+  <script src="/_sdk/dfeb017e55db4863.resizing_sdk.js" type="text/javascript" integrity="sha512-kbPBNN/FAxsctln1jqNvXyIdF7mIhQx0C+eGGC2IF3mNjNZZcftDT1wFztswSSk4KXRWYHIC3uA9NMfJV4IVUw=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full" style="background: rgb(250, 250, 247);">
+  <div class="app-shell">
+   <aside id="sidebar" class="sidebar" aria-label="Primary navigation">
+    <div class="px-4 pt-5">
+     <div class="flex items-center justify-between gap-2 mb-7">
+      <span data-template-id="brand-name" class="canva-text sidebar-copy font-bold" style="font-size: 15px; letter-spacing: -0.035em; color: rgb(32, 33, 36); font-weight: 700;">folio<span style="color:#FFD928">.</span></span> <button id="collapse-sidebar" class="icon-button desktop-collapse" type="button" aria-label="Collapse sidebar" title="Collapse sidebar"><i data-lucide="panel-left-close"></i></button> <button id="close-mobile-sidebar" class="icon-button mobile-menu hidden" type="button" aria-label="Close navigation"><i data-lucide="x"></i></button>
+     </div>
+     <div class="relative">
+      <button id="workspace-toggle" class="workspace-button" type="button" aria-expanded="false"> <span class="brand-mark">N</span> <span class="sidebar-copy min-w-0 flex-1"><span data-template-id="workspace-name" class="canva-text block font-bold truncate" style="font-size: 14px; color: rgb(32, 33, 36); font-weight: 700; font-style: normal;">Northstar Studio</span><span data-template-id="workspace-plan" class="canva-text block text-[#999]" style="font-size: 14px; color: rgb(153, 153, 153); font-weight: 400; font-style: normal;">Pro workspace</span></span> <i data-lucide="chevrons-up-down" class="workspace-chevron w-3 h-3 text-[#999]"></i> </button>
+      <div id="workspace-menu" class="popup hidden" style="left:0;right:auto;top:calc(100% + 6px)">
+       <button id="workspace-choice" type="button">✓ Northstar Studio</button>
+      </div>
+     </div>
+    </div>
+    <nav class="px-3 mt-8 flex-1 overflow-y-auto" aria-label="Modules">
+     <p data-template-id="nav-workspace-label" class="canva-text section-caption sidebar-copy px-3 mb-2" style="color: rgb(160, 160, 160); font-weight: 700; font-style: normal; font-size: 14px;">Workspace</p><button class="nav-item" data-module="Overview" type="button"><i data-lucide="layout-dashboard"></i><span class="nav-label">Overview</span></button> <button class="nav-item active" data-module="Content Library" type="button"><i data-lucide="files"></i><span class="nav-label">Content Library</span></button> <button class="nav-item" data-module="Editorial Calendar" type="button"><i data-lucide="calendar-days"></i><span class="nav-label">Editorial Calendar</span></button> <button class="nav-item" data-module="Media Library" type="button"><i data-lucide="image"></i><span class="nav-label">Media Library</span></button> <button class="nav-item" data-module="Templates" type="button"><i data-lucide="layout-template"></i><span class="nav-label">Templates</span></button>
+     <div class="sidebar-divider"></div>
+     <p data-template-id="nav-manage-label" class="canva-text section-caption sidebar-copy px-3 mb-2" style="color: rgb(160, 160, 160); font-weight: 700; font-style: normal; font-size: 14px;">Manage</p><button class="nav-item" data-module="Workflow" type="button"><i data-lucide="git-branch"></i><span class="nav-label">Workflow</span></button> <button class="nav-item" data-module="Team Members" type="button"><i data-lucide="users-round"></i><span class="nav-label">Team Members</span></button> <button class="nav-item" data-module="Settings" type="button"><i data-lucide="settings-2"></i><span class="nav-label">Settings</span></button>
+    </nav>
+    <div class="p-3 border-t border-[#E7E7E2] relative">
+     <button id="user-toggle" class="user-card flex items-center gap-3 w-full p-2 rounded-lg hover:bg-[#F7F7F6] text-left" type="button" aria-expanded="false"> <span class="avatar">AC</span><span class="user-copy flex-1 min-w-0"><span data-template-id="user-name" class="canva-text block font-bold truncate" style="font-size: 14px; color: rgb(32, 33, 36); font-weight: 700; font-style: normal;">Alex Chen</span><span data-template-id="user-role" class="canva-text block text-[#999]" style="font-size: 14px; color: rgb(153, 153, 153); font-weight: 400; font-style: normal;">Workspace admin</span></span> <i data-lucide="ellipsis" class="user-copy w-4 h-4 text-[#999]"></i> </button>
+     <div id="user-menu" class="popup hidden" style="bottom:calc(100% + 4px);top:auto;left:12px;right:12px">
+      <button id="user-settings" type="button">Workspace settings</button>
+     </div>
+    </div>
+   </aside>
+   <div class="main-shell">
+    <header class="topbar">
+     <div class="flex items-center gap-2 min-w-0 text-xs">
+      <button id="open-mobile-sidebar" class="icon-button mobile-menu hidden" type="button" aria-label="Open navigation"><i data-lucide="menu"></i></button> <span data-template-id="breadcrumb-workspace" class="canva-text text-[#888] whitespace-nowrap" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 14px;">Workspace</span> <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#B4B4B4]"></i> <span id="breadcrumb-current" class="font-semibold truncate">Content Library</span>
+     </div>
+     <div class="search-wrap">
+      <i data-lucide="search"></i> <label for="global-search" class="sr-only">Search content</label> <input id="global-search" data-template-id="search-placeholder" class="canva-input" placeholder="Search content..." style="background: rgb(247, 247, 246); color: rgb(32, 33, 36); font-weight: 400; font-style: normal; font-size: 14px;">
+     </div>
+     <div class="flex items-center gap-2">
+      <div class="relative">
+       <button id="notifications-toggle" type="button" class="icon-button" aria-label="Notifications" aria-expanded="false"><i data-lucide="bell"></i></button>
+       <div id="notifications-menu" class="popup hidden" style="min-width:240px">
+        <p data-template-id="notifications-heading" class="canva-text font-bold px-3 py-2" style="font-size: 14px; color: rgb(32, 33, 36); font-weight: 700; font-style: normal;">Notifications</p>
+        <p data-template-id="notifications-empty" class="canva-text px-3 pb-3 text-[#888]" style="font-size: 14px; color: rgb(136, 136, 136); font-weight: 400; font-style: normal;">You're all caught up.</p>
+       </div>
+      </div><button id="header-avatar" class="avatar border-0" type="button" aria-label="Open user menu">AC</button> <span class="h-5 w-px bg-[#E7E7E2] mx-1"></span> <button id="toggle-details" class="icon-button" type="button" aria-label="Toggle details panel" aria-expanded="true" title="Toggle details"><i data-lucide="panel-right"></i></button>
+     </div>
+    </header>
+    <div class="workspace-area">
+     <main class="content-area">
+      <section id="library-module">
+       <div class="flex flex-wrap justify-between items-start gap-5 mb-8">
+        <div>
+         <div data-template-id="eyebrow" class="canva-text section-caption mb-3" style="color: rgb(160, 160, 160); font-weight: 700; font-style: normal; font-size: 14px;">CONTENT / LIBRARY</div>
+         <h1 data-template-id="page-title" class="canva-text font-bold tracking-[-.04em] leading-tight" style="font-size: 28px; color: rgb(37, 37, 37); font-weight: 700; font-style: normal;">Content Library</h1>
+         <p data-template-id="page-subtitle" class="canva-text mt-2 text-[#777]" style="font-size: 14px; color: rgb(37, 37, 37); font-weight: 400; font-style: normal;">Create, organize and manage your content.</p>
+        </div>
+        <div class="heading-actions flex gap-2 items-center pt-1">
+         <button id="header-filter" data-template-id="filter-button" class="canva-button soft-button" type="button" style="background: rgb(255, 255, 255); color: rgb(85, 85, 85); font-weight: 600;"><i data-lucide="sliders-horizontal" class="w-4 h-4"></i><span>Filters</span></button> <button id="new-content" data-template-id="new-button" class="canva-button primary-button" type="button" style="background: rgb(255, 217, 40); color: rgb(255, 255, 255); font-weight: 700;"><i data-lucide="plus" class="w-4 h-4"></i><span>New Content</span></button>
+        </div>
+       </div>
+       <div class="flex items-center justify-between gap-4 flex-wrap">
+        <div class="tabs" role="tablist" aria-label="Filter by status">
+         <button class="tab active" type="button" role="tab" aria-selected="true" data-filter="All Content">All Content</button> <button class="tab" type="button" role="tab" aria-selected="false" data-filter="Draft">Drafts</button> <button class="tab" type="button" role="tab" aria-selected="false" data-filter="In Review">In Review</button> <button class="tab" type="button" role="tab" aria-selected="false" data-filter="Scheduled">Scheduled</button> <button class="tab" type="button" role="tab" aria-selected="false" data-filter="Published">Published</button>
+        </div><span id="result-count" class="text-[#999] text-xs"></span>
+       </div>
+       <div class="toolbar flex items-center justify-between gap-3 py-4">
+        <div class="flex items-center gap-2">
+         <span data-template-id="library-label" class="canva-text font-bold" style="font-size: 14px; color: rgb(32, 33, 36); font-weight: 700; font-style: normal;">All content</span> <span id="total-badge" class="rounded bg-[#F0F0EE] px-2 py-0.5 text-[10px] font-bold text-[#888]"></span>
+        </div>
+        <div class="toolbar-right flex items-center gap-2">
+         <label for="sort-select" data-template-id="sort-label" class="canva-text text-[#888] text-xs" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 14px;">Sort by</label> <select id="sort-select" class="field !w-auto !py-2 text-xs" aria-label="Sort content"> <option value="recent">Last updated</option><option value="title">Title A–Z</option><option value="oldest">Oldest first</option> </select>
+         <div class="flex border border-[#E7E7E2] rounded-lg p-0.5 bg-white ml-1" role="group" aria-label="Content view">
+          <button class="icon-button view-btn active" data-view="table" type="button" aria-label="Table view" aria-pressed="true"><i data-lucide="list"></i></button> <button class="icon-button view-btn" data-view="grid" type="button" aria-label="Grid view" aria-pressed="false"><i data-lucide="layout-grid"></i></button> <button class="icon-button view-btn" data-view="calendar" type="button" aria-label="Calendar view" aria-pressed="false"><i data-lucide="calendar-days"></i></button>
+         </div>
+        </div>
+       </div>
+       <div id="selection-bar" class="hidden mb-3 rounded-lg border border-[#E7E7E2] bg-[#FFF3A6] px-4 py-2 text-xs text-[#FFD928]"><span id="selected-count"></span> selected <button id="clear-selection" class="underline ml-3" type="button">Clear selection</button>
+       </div>
+       <div id="table-view" class="library-card table-scroll">
+        <table>
+         <thead>
+          <tr>
+           <th style="width:35px"><label class="sr-only" for="select-all">Select all visible content</label><input id="select-all" type="checkbox" class="accent-[#FFD928]"></th>
+           <th style="min-width:240px">Content title</th>
+           <th>Status</th>
+           <th>Content type</th>
+           <th>Channel</th>
+           <th>Last updated</th>
+           <th>Owner</th>
+           <th style="width:42px"><span class="sr-only">Actions</span></th>
+          </tr>
+         </thead>
+         <tbody id="table-body"></tbody>
+        </table>
+       </div>
+       <div id="grid-view" class="hidden grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3"></div>
+       <div id="calendar-view" class="hidden library-card overflow-hidden">
+        <div class="flex items-center justify-between p-4 border-b border-[#E8E8E6]">
+         <button id="previous-month" class="icon-button" type="button" aria-label="Previous month"><i data-lucide="chevron-left"></i></button>
+         <h2 id="calendar-heading" class="font-bold text-sm"></h2><button id="next-month" class="icon-button" type="button" aria-label="Next month"><i data-lucide="chevron-right"></i></button>
+        </div>
+        <div class="grid grid-cols-7 text-center text-[10px] font-bold uppercase tracking-wide text-[#999] border-b border-[#E8E8E6] py-3"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div id="calendar-grid" class="grid grid-cols-7"></div>
+       </div>
+       <div id="empty-state" class="hidden text-center py-16 text-[#888] text-sm">
+        No content matches your current filters.
+       </div>
+       <p data-template-id="library-footer" class="canva-text mt-5 text-[#AAA]" style="font-size: 14px; color: rgb(170, 170, 170); font-weight: 400; font-style: normal;">A clear view of every story in progress.</p>
+      </section>
+      <section id="other-module" class="hidden">
+       <div data-template-id="other-eyebrow" class="canva-text section-caption mb-3" style="color: rgb(160, 160, 160); font-weight: 700; font-style: normal; font-size: 14px;">WORKSPACE</div>
+       <h1 id="other-title" class="font-bold tracking-[-.04em]" style="font-size:29px"></h1>
+       <p id="other-description" class="text-[#777] mt-2 text-sm"></p>
+       <div class="bg-white border border-[#E8E8E6] rounded-xl p-8 mt-8 max-w-xl">
+        <div class="document-icon mb-5"><i data-lucide="layout-dashboard"></i>
+        </div>
+        <h2 data-template-id="module-card-heading" class="canva-text font-bold" style="font-size: 21px; color: rgb(32, 33, 36); font-weight: 700; font-style: normal;">Your workspace, in one place</h2>
+        <p data-template-id="module-card-body" class="canva-text text-[#777] mt-2 leading-relaxed" style="font-size: 14px; color: rgb(119, 119, 119); font-weight: 400; font-style: normal;">Select Content Library to manage your editorial items, or use the calendar to see scheduled content.</p><button id="return-library" data-template-id="return-button" class="canva-button soft-button mt-6" type="button" style="background: rgb(255, 255, 255); color: rgb(85, 85, 85); font-weight: 600; font-style: normal; font-size: 14px;">Open Content Library</button>
+       </div>
+      </section>
+     </main>
+     <aside id="details-panel" class="details" aria-label="Content details">
+      <div class="flex items-center justify-between mb-6">
+       <h2 data-template-id="details-heading" class="canva-text font-bold" style="font-size: 21px; color: rgb(32, 33, 36); font-weight: 700; font-style: normal;">Content details</h2><button id="close-details" class="icon-button" type="button" aria-label="Close details panel"><i data-lucide="x"></i></button>
+      </div>
+      <div id="details-content">
+       <div class="w-full h-32 bg-[#FFF3A6] border border-[#EBECF0] rounded-lg flex items-center justify-center text-[#F4B400] mb-5"><i data-lucide="file-text" style="width:32px;height:32px;stroke-width:1.3"></i>
+       </div>
+       <h3 id="detail-title" class="font-bold leading-snug" style="font-size:17px"></h3>
+       <p id="detail-description" class="text-[#888] text-xs leading-relaxed mt-2"></p>
+       <div class="flex gap-2 mt-5">
+        <button id="detail-edit" data-template-id="edit-button" class="canva-button primary-button flex-1" type="button" style="background: rgb(255, 217, 40); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 14px;">Edit content</button> <button id="detail-preview" data-template-id="preview-button" class="canva-button soft-button flex-1" type="button" style="background: rgb(255, 255, 255); color: rgb(85, 85, 85); font-weight: 600; font-style: normal; font-size: 14px;">Preview</button>
+       </div>
+       <div class="border-t border-[#E8E8E6] mt-7 pt-6">
+        <h3 data-template-id="properties-heading" class="canva-text section-caption mb-5" style="color: rgb(160, 160, 160); font-weight: 700; font-style: normal; font-size: 16px;">Properties</h3>
+        <dl class="grid grid-cols-[105px_1fr] gap-y-5 text-xs items-center">
+         <dt class="text-[#999]">
+          Status
+         </dt>
+         <dd id="detail-status"></dd>
+         <dt class="text-[#999]">
+          Content type
+         </dt>
+         <dd id="detail-type" class="font-medium"></dd>
+         <dt class="text-[#999]">
+          Owner
+         </dt>
+         <dd id="detail-owner" class="font-medium"></dd>
+         <dt class="text-[#999]">
+          Last modified
+         </dt>
+         <dd id="detail-updated" class="font-medium"></dd>
+         <dt class="text-[#999]">
+          Publication
+         </dt>
+         <dd id="detail-publication" class="font-medium"></dd>
+         <dt class="text-[#999]">
+          Tags
+         </dt>
+         <dd id="detail-tags" class="flex gap-1 flex-wrap"></dd>
+        </dl>
+       </div>
+       <div class="border-t border-[#E8E8E6] mt-7 pt-6">
+        <h3 data-template-id="activity-heading" class="canva-text section-caption mb-5" style="color: rgb(160, 160, 160); font-weight: 700; font-style: normal; font-size: 16px;">Activity</h3>
+        <div class="flex gap-3">
+         <div class="avatar !w-7 !h-7">
+          AC
+         </div>
+         <div>
+          <p id="activity-text" class="text-xs leading-relaxed"></p>
+          <p id="activity-date" class="text-[11px] text-[#999] mt-1"></p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <p id="details-empty" class="hidden text-[#999] text-xs">Select an item to see its details.</p>
+     </aside>
+    </div>
+   </div>
+  </div>
+  <div id="editor-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="editor-heading">
+   <div class="modal-card">
+    <div class="flex items-center justify-between mb-5">
+     <h2 id="editor-heading" class="font-bold text-lg"></h2><button class="icon-button close-modal" type="button" aria-label="Close editor"><i data-lucide="x"></i></button>
+    </div>
+    <form id="editor-form" class="space-y-4">
+     <div><label class="field-label" for="content-title">Content title</label><input id="content-title" class="field" maxlength="100" required="">
+     </div>
+     <div><label class="field-label" for="content-description">Description</label><input id="content-description" class="field" maxlength="180">
+     </div>
+     <div class="grid grid-cols-2 gap-3">
+      <div><label class="field-label" for="content-type">Content type</label><select id="content-type" class="field"><option>Article</option><option>Blog post</option><option>Newsletter</option><option>Social post</option><option>Guide</option></select>
+      </div>
+      <div><label class="field-label" for="content-status">Status</label><select id="content-status" class="field"><option>Draft</option><option>In Review</option><option>Scheduled</option><option>Published</option></select>
+      </div>
+     </div>
+     <div class="grid grid-cols-2 gap-3">
+      <div><label class="field-label" for="content-channel">Channel</label><select id="content-channel" class="field"><option>Website</option><option>Blog</option><option>Email</option><option>LinkedIn</option></select>
+      </div>
+      <div><label class="field-label" for="content-owner">Owner</label><select id="content-owner" class="field"><option>Alex Chen</option><option>Maya Patel</option><option>Jordan Lee</option><option>Sam Rivera</option></select>
+      </div>
+     </div>
+     <div><label class="field-label" for="content-date">Publication date</label><input id="content-date" class="field" type="date">
+     </div>
+     <div><label class="field-label" for="content-tags">Tags <span class="font-normal text-[#999]">(comma separated)</span></label><input id="content-tags" class="field" placeholder="Editorial, Strategy">
+     </div>
+     <div class="flex justify-end gap-2 pt-3"><button class="soft-button close-modal" type="button">Cancel</button><button id="save-content" class="primary-button" type="submit">Save content</button>
+     </div>
+    </form>
+   </div>
+  </div>
+  <div id="preview-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="preview-heading">
+   <div class="modal-card">
+    <div class="flex items-center justify-between mb-5">
+     <h2 id="preview-heading" class="font-bold text-sm">Content preview</h2><button class="icon-button close-modal" type="button" aria-label="Close preview"><i data-lucide="x"></i></button>
+    </div>
+    <div class="bg-[#F4F5F8] rounded-lg h-36 flex items-center justify-center text-[#818CAD]"><i data-lucide="file-text" class="w-9 h-9"></i>
+    </div>
+    <p id="preview-type" class="section-caption mt-6"></p>
+    <h3 id="preview-title" class="font-bold text-xl mt-2"></h3>
+    <p id="preview-description" class="text-[#777] text-sm mt-3 leading-relaxed"></p>
+    <p class="text-[#999] text-xs mt-6 border-t border-[#E8E8E6] pt-4">This preview displays the item's current library summary.</p>
+   </div>
+  </div>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script>
+    const items=[
+      {id:1,title:"The future of thoughtful design",description:"A closer look at the principles shaping meaningful digital experiences.",status:"In Review",type:"Article",channel:"Website",updated:"2026-10-29",owner:"Alex Chen",publication:"2026-11-06",tags:["Design","Insights"]},
+      {id:2,title:"October product update",description:"What's new across the product this month.",status:"Published",type:"Blog post",channel:"Blog",updated:"2026-10-27",owner:"Maya Patel",publication:"2026-10-28",tags:["Product","Updates"]},
+      {id:3,title:"A better way to work together",description:"Introducing a more connected workflow for modern teams.",status:"Scheduled",type:"Newsletter",channel:"Email",updated:"2026-10-25",owner:"Jordan Lee",publication:"2026-11-03",tags:["Teamwork"]},
+      {id:4,title:"Building a stronger brand voice",description:"Practical guidance for writing with clarity and consistency.",status:"Draft",type:"Guide",channel:"Website",updated:"2026-10-23",owner:"Alex Chen",publication:"",tags:["Brand","Strategy"]},
+      {id:5,title:"Behind the scenes at Northstar",description:"Meet the people and ideas behind our latest work.",status:"Draft",type:"Social post",channel:"LinkedIn",updated:"2026-10-21",owner:"Sam Rivera",publication:"",tags:["Culture"]},
+      {id:6,title:"How ideas become great stories",description:"From first brief to final publication.",status:"Published",type:"Article",channel:"Blog",updated:"2026-10-18",owner:"Maya Patel",publication:"2026-10-19",tags:["Editorial"]}
+    ];
+    let nextId=7,selectedId=1,activeFilter="All Content",view="table",module="Content Library",editId=null,calendarDate=new Date(2026,9,1);
+    const checked=new Set();
+    const $=id=>document.getElementById(id);
+    const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const formatDate=s=>s?new Date(s+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"Not set";
+    const pill=s=>'<span class="status-pill status-'+s.replaceAll(" ","-")+'"><span class="status-dot"></span>'+escapeHTML(s)+'</span>';
+    function filtered(){
+      const q=$('global-search').value.trim().toLowerCase();
+      return items.filter(x=>(activeFilter==="All Content"||x.status===activeFilter)&&(!q||[x.title,x.description,x.type,x.channel,x.owner].some(v=>v.toLowerCase().includes(q)))).sort((a,b)=>$('sort-select').value==="title"?a.title.localeCompare(b.title):$('sort-select').value==="oldest"?a.updated.localeCompare(b.updated):b.updated.localeCompare(a.updated));
+    }
+    function render(){
+      const list=filtered();
+      $('result-count').textContent=list.length+" "+(list.length===1?"item":"items");
+      $('total-badge').textContent=items.length;
+      $('empty-state').classList.toggle('hidden',list.length!==0);
+      $('table-view').classList.toggle('hidden',view!=="table");
+      $('grid-view').classList.toggle('hidden',view!=="grid");
+      $('calendar-view').classList.toggle('hidden',view!=="calendar");
+      $('table-body').innerHTML=list.map(x=>`<tr data-id="${x.id}" class="${x.id===selectedId?'selected':''}" tabindex="0" aria-selected="${x.id===selectedId}"><td><input class="row-check accent-[#5865A8]" type="checkbox" aria-label="Select ${escapeHTML(x.title)}" ${checked.has(x.id)?'checked':''}></td><td><div class="flex items-center gap-3"><span class="document-icon"><i data-lucide="file-text"></i></span><span class="min-w-0"><span class="block font-bold text-[#303237] text-xs">${escapeHTML(x.title)}</span><span class="block text-[11px] text-[#A0A0A0] mt-1">${escapeHTML(x.description.slice(0,42))}${x.description.length>42?'…':''}</span></span></div></td><td>${pill(x.status)}</td><td>${escapeHTML(x.type)}</td><td>${escapeHTML(x.channel)}</td><td>${formatDate(x.updated)}</td><td><span class="inline-flex items-center gap-2"><span class="avatar !w-6 !h-6 !text-[9px]">${x.owner.split(' ').map(p=>p[0]).join('')}</span>${escapeHTML(x.owner)}</span></td><td><div class="relative"><button type="button" class="row-menu-button icon-button" aria-label="Actions for ${escapeHTML(x.title)}" aria-expanded="false"><i data-lucide="ellipsis"></i></button><div class="row-menu popup hidden"><button type="button" data-action="preview">Preview</button><button type="button" data-action="edit">Edit</button><button type="button" data-action="delete">Delete</button><button type="button" data-action="confirm" class="hidden !text-red-700">Confirm delete</button><button type="button" data-action="cancel" class="hidden">Cancel</button></div></div></td></tr>`).join('');
+      $('grid-view').innerHTML=list.map(x=>`<button type="button" data-id="${x.id}" class="grid-card ${x.id===selectedId?'selected':''}"><span class="document-icon mb-5"><i data-lucide="file-text"></i></span><span class="block font-bold text-[13px] leading-snug mb-2">${escapeHTML(x.title)}</span><span class="block text-xs text-[#888] leading-relaxed h-9 overflow-hidden">${escapeHTML(x.description)}</span><span class="flex items-center justify-between mt-5">${pill(x.status)}<span class="text-[11px] text-[#999]">${formatDate(x.updated)}</span></span></button>`).join('');
+      $('select-all').checked=list.length>0&&list.every(x=>checked.has(x.id));
+      $('select-all').indeterminate=list.some(x=>checked.has(x.id))&&!$('select-all').checked;
+      $('selection-bar').classList.toggle('hidden',checked.size===0);
+      $('selected-count').textContent=checked.size;
+      renderCalendar(list);renderDetails();lucide.createIcons();
+    }
+    function renderCalendar(list){
+      const y=calendarDate.getFullYear(),m=calendarDate.getMonth(),first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate();
+      $('calendar-heading').textContent=calendarDate.toLocaleDateString('en-US',{month:'long',year:'numeric'});
+      let html='';
+      for(let i=0;i<first;i++)html+='<div class="calendar-cell bg-[#FAFAF7]"></div>';
+      for(let d=1;d<=days;d++){
+        const key=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+        html+=`<div class="calendar-cell"><span class="text-[11px] text-[#888]">${d}</span>${list.filter(x=>x.publication===key).map(x=>`<button type="button" data-id="${x.id}" class="calendar-item" title="${escapeHTML(x.title)}">${escapeHTML(x.title)}</button>`).join('')}</div>`;
+      }
+      $('calendar-grid').innerHTML=html;
+    }
+    function renderDetails(){
+      const x=items.find(v=>v.id===selectedId);
+      $('details-content').classList.toggle('hidden',!x);$('details-empty').classList.toggle('hidden',!!x);
+      if(!x)return;
+      $('detail-title').textContent=x.title;$('detail-description').textContent=x.description;
+      $('detail-status').innerHTML=pill(x.status);$('detail-type').textContent=x.type;$('detail-owner').textContent=x.owner;
+      $('detail-updated').textContent=formatDate(x.updated);$('detail-publication').textContent=formatDate(x.publication);
+      $('detail-tags').innerHTML=x.tags.length?x.tags.map(t=>`<span class="bg-[#F3F3F2] text-[#777] rounded px-2 py-1 text-[10px]">${escapeHTML(t)}</span>`).join(''):'<span class="text-[#aaa]">None</span>';
+      $('activity-text').textContent=x.owner+" updated this content";$('activity-date').textContent=formatDate(x.updated);
+    }
+    function selectItem(id){selectedId=id;render();if(window.innerWidth<=950){$('details-panel').classList.remove('is-hidden');$('toggle-details').setAttribute('aria-expanded','true')}}
+    function toast(message){$('toast').textContent=message;$('toast').classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').classList.add('hidden'),2800)}
+    function closePopups(){document.querySelectorAll('.popup').forEach(p=>p.classList.add('hidden'));document.querySelectorAll('[aria-expanded="true"]').forEach(b=>{if(b.id!=='toggle-details')b.setAttribute('aria-expanded','false')})}
+    function togglePopup(button,popup){const opening=popup.classList.contains('hidden');closePopups();popup.classList.toggle('hidden',!opening);button.setAttribute('aria-expanded',String(opening))}
+    function openEditor(id=null){
+      editId=id;const x=items.find(v=>v.id===id);
+      $('editor-heading').textContent=x?'Edit content':'New content';
+      $('save-content').textContent=x?'Save changes':'Create content';
+      $('content-title').value=x?.title||'';$('content-description').value=x?.description||'';
+      $('content-type').value=x?.type||'Article';$('content-status').value=x?.status||'Draft';
+      $('content-channel').value=x?.channel||'Website';$('content-owner').value=x?.owner||'Alex Chen';
+      $('content-date').value=x?.publication||'';$('content-tags').value=x?.tags.join(', ')||'';
+      $('editor-modal').classList.remove('hidden');$('content-title').focus();
+    }
+    function openPreview(id){const x=items.find(v=>v.id===id);if(!x)return;$('preview-type').textContent=x.type+' · '+x.channel;$('preview-title').textContent=x.title;$('preview-description').textContent=x.description||'No summary added yet.';$('preview-modal').classList.remove('hidden')}
+    function changeModule(name){
+      module=name;document.querySelectorAll('.nav-item').forEach(b=>b.classList.toggle('active',b.dataset.module===name));
+      $('breadcrumb-current').textContent=name;$('library-module').classList.toggle('hidden',name!=='Content Library');
+      $('other-module').classList.toggle('hidden',name==='Content Library');
+      $('details-panel').classList.toggle('is-hidden',name!=='Content Library');
+      $('toggle-details').disabled=name!=='Content Library';
+      if(name!=='Content Library'){
+        $('other-title').textContent=name;
+        $('other-description').textContent=name==='Editorial Calendar'?'Browse planned publications in the Content Library calendar view.':'This workspace section is ready for your team.';
+      }
+      $('sidebar').classList.remove('mobile-open');
+    }
+    document.querySelectorAll('.nav-item').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.module==='Editorial Calendar'){changeModule('Content Library');setView('calendar');document.querySelectorAll('.nav-item').forEach(n=>n.classList.toggle('active',n.dataset.module==='Editorial Calendar'));$('breadcrumb-current').textContent='Editorial Calendar'}else changeModule(b.dataset.module)}));
+    function setView(name){view=name;document.querySelectorAll('.view-btn').forEach(b=>{b.classList.toggle('active',b.dataset.view===name);b.setAttribute('aria-pressed',String(b.dataset.view===name))});render()}
+    document.querySelectorAll('.view-btn').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+    document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{activeFilter=b.dataset.filter;document.querySelectorAll('.tab').forEach(t=>{t.classList.toggle('active',t===b);t.setAttribute('aria-selected',String(t===b))});render()}));
+    $('global-search').addEventListener('input',render);$('sort-select').addEventListener('change',render);
+    $('header-filter').addEventListener('click',()=>{document.querySelector('.tabs').scrollIntoView({behavior:'smooth',block:'nearest'});document.querySelector('.tab').focus()});
+    $('new-content').addEventListener('click',()=>openEditor());
+    $('return-library').addEventListener('click',()=>changeModule('Content Library'));
+    $('detail-edit').addEventListener('click',()=>openEditor(selectedId));$('detail-preview').addEventListener('click',()=>openPreview(selectedId));
+    $('editor-form').addEventListener('submit',e=>{
+      e.preventDefault();
+      const title=$('content-title').value.trim();if(!title){$('content-title').focus();return}
+      const values={title,description:$('content-description').value.trim(),type:$('content-type').value,status:$('content-status').value,channel:$('content-channel').value,owner:$('content-owner').value,publication:$('content-date').value,tags:$('content-tags').value.split(',').map(t=>t.trim()).filter(Boolean),updated:new Date().toISOString().slice(0,10)};
+      if(editId){Object.assign(items.find(x=>x.id===editId),values);toast('Content updated')}else{const item={id:nextId++,...values};items.unshift(item);selectedId=item.id;toast('Content created')}
+      $('editor-modal').classList.add('hidden');render();
+    });
+    document.querySelectorAll('.close-modal').forEach(b=>b.addEventListener('click',()=>b.closest('.modal-backdrop').classList.add('hidden')));
+    document.querySelectorAll('.modal-backdrop').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.add('hidden')}));
+    $('table-body').addEventListener('click',e=>{
+      const row=e.target.closest('tr');if(!row)return;const id=Number(row.dataset.id);
+      if(e.target.closest('.row-check')){e.target.checked?checked.add(id):checked.delete(id);render();return}
+      const menuButton=e.target.closest('.row-menu-button');
+      if(menuButton){e.stopPropagation();togglePopup(menuButton,row.querySelector('.row-menu'));return}
+      const action=e.target.closest('[data-action]');
+      if(action){e.stopPropagation();const menu=row.querySelector('.row-menu');const kind=action.dataset.action;
+        if(kind==='preview'){closePopups();openPreview(id)}
+        if(kind==='edit'){closePopups();openEditor(id)}
+        if(kind==='delete'){menu.querySelectorAll('[data-action="preview"],[data-action="edit"],[data-action="delete"]').forEach(b=>b.classList.add('hidden'));menu.querySelectorAll('[data-action="confirm"],[data-action="cancel"]').forEach(b=>b.classList.remove('hidden'))}
+        if(kind==='cancel'){closePopups();render()}
+        if(kind==='confirm'){items.splice(items.findIndex(x=>x.id===id),1);checked.delete(id);if(selectedId===id)selectedId=items[0]?.id??null;toast('Content deleted');render()}
+        return;
+      }selectItem(id);
+    });
+    $('table-body').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.tagName==='TR'){e.preventDefault();selectItem(Number(e.target.dataset.id))}});
+    $('grid-view').addEventListener('click',e=>{const card=e.target.closest('[data-id]');if(card)selectItem(Number(card.dataset.id))});
+    $('calendar-grid').addEventListener('click',e=>{const item=e.target.closest('[data-id]');if(item)selectItem(Number(item.dataset.id))});
+    $('select-all').addEventListener('change',e=>{filtered().forEach(x=>e.target.checked?checked.add(x.id):checked.delete(x.id));render()});
+    $('clear-selection').addEventListener('click',()=>{checked.clear();render()});
+    $('previous-month').addEventListener('click',()=>{calendarDate.setMonth(calendarDate.getMonth()-1);render()});
+    $('next-month').addEventListener('click',()=>{calendarDate.setMonth(calendarDate.getMonth()+1);render()});
+    $('collapse-sidebar').addEventListener('click',()=>{const closed=$('sidebar').classList.toggle('collapsed');$('collapse-sidebar').setAttribute('aria-label',closed?'Expand sidebar':'Collapse sidebar')});
+    $('open-mobile-sidebar').addEventListener('click',()=>$('sidebar').classList.add('mobile-open'));
+    $('close-mobile-sidebar').addEventListener('click',()=>$('sidebar').classList.remove('mobile-open'));
+    $('toggle-details').addEventListener('click',()=>{const closed=$('details-panel').classList.toggle('is-hidden');$('toggle-details').setAttribute('aria-expanded',String(!closed))});
+    $('close-details').addEventListener('click',()=>$('toggle-details').click());
+    $('notifications-toggle').addEventListener('click',()=>togglePopup($('notifications-toggle'),$('notifications-menu')));
+    $('workspace-toggle').addEventListener('click',()=>togglePopup($('workspace-toggle'),$('workspace-menu')));
+    $('workspace-choice').addEventListener('click',()=>{closePopups();toast('Northstar Studio is selected')});
+    $('user-toggle').addEventListener('click',()=>togglePopup($('user-toggle'),$('user-menu')));
+    $('header-avatar').addEventListener('click',()=>togglePopup($('user-toggle'),$('user-menu')));
+    $('user-settings').addEventListener('click',()=>{closePopups();changeModule('Settings')});
+    document.addEventListener('click',e=>{if(!e.target.closest('.popup')&&!e.target.closest('#notifications-toggle')&&!e.target.closest('#workspace-toggle')&&!e.target.closest('#user-toggle')&&!e.target.closest('#header-avatar')&&!e.target.closest('.row-menu-button'))closePopups()});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal-backdrop').forEach(m=>m.classList.add('hidden'));closePopups();$('sidebar').classList.remove('mobile-open')}});
+    render();
+  </script>
+ 
+</body></html>
