@@ -13,6 +13,8 @@ interface ContentStoreState {
   createContenido: (values: NuevoContenido) => Contenido;
   updateContenido: (id: number, values: NuevoContenido) => void;
   deleteContenido: (id: number) => void;
+  approveContenido: (id: number) => void;
+  requestChanges: (id: number, comentario: string) => void;
 }
 
 export const useContentStore = create<ContentStoreState>((set, get) => ({
@@ -59,4 +61,18 @@ export const useContentStore = create<ContentStoreState>((set, get) => ({
       const selectedId = state.selectedId === id ? contenidos[0]?.id ?? null : state.selectedId;
       return { contenidos, checkedIds, selectedId };
     }),
+
+  approveContenido: (id) =>
+    set((state) => ({
+      contenidos: state.contenidos.map((c) =>
+        c.id === id ? { ...c, estado: "Programado", comentarioCliente: undefined, actualizado: new Date().toISOString().slice(0, 10) } : c
+      ),
+    })),
+
+  requestChanges: (id, comentario) =>
+    set((state) => ({
+      contenidos: state.contenidos.map((c) =>
+        c.id === id ? { ...c, estado: "Borrador", comentarioCliente: comentario, actualizado: new Date().toISOString().slice(0, 10) } : c
+      ),
+    })),
 }));

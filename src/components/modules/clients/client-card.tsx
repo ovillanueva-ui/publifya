@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { useClientStore } from "@/store/client-store";
 import { useContentStore } from "@/store/content-store";
 import { useUiStore } from "@/store/ui-store";
@@ -13,32 +15,41 @@ export function ClientCard({ cliente }: { cliente: Cliente }) {
   const programados = items.filter((c) => c.estado === "Programado").length;
 
   return (
-    <button
-      type="button"
-      onClick={() => {
-        setActiveClient(cliente.id);
-        setActiveModule("Biblioteca de contenido");
-      }}
-      className="flex flex-col gap-2.5 rounded-xl border border-line bg-surface p-4 text-left hover:border-accent"
-    >
-      <div className="flex items-center gap-2.5">
-        <span
-          className="flex h-[30px] w-[30px] flex-none items-center justify-center rounded-lg text-xs font-bold text-white"
-          style={{ background: cliente.color }}
-        >
-          {cliente.iniciales}
-        </span>
-        <div>
-          <span className="block text-sm font-bold text-ink">{cliente.nombre}</span>
-          <span className="block text-[11.5px] text-faint">{cliente.sector}</span>
+    <div className="flex flex-col gap-3 rounded-xl border border-line bg-surface p-4">
+      <button
+        type="button"
+        onClick={() => {
+          setActiveClient(cliente.id);
+          setActiveModule("Biblioteca de contenido");
+        }}
+        className="flex flex-col gap-2.5 text-left"
+      >
+        <div className="flex items-center gap-2.5">
+          <span
+            className="flex h-[30px] w-[30px] flex-none items-center justify-center rounded-lg text-xs font-bold text-white"
+            style={{ background: cliente.color }}
+          >
+            {cliente.iniciales}
+          </span>
+          <div>
+            <span className="block text-sm font-bold text-ink">{cliente.nombre}</span>
+            <span className="block text-[11.5px] text-faint">{cliente.sector}</span>
+          </div>
         </div>
-      </div>
-      <div className="flex gap-4">
-        <Stat label="Contenidos" value={items.length} />
-        <Stat label="Publicados" value={publicados} />
-        <Stat label="Programados" value={programados} />
-      </div>
-    </button>
+        <div className="flex gap-4">
+          <Stat label="Contenidos" value={items.length} />
+          <Stat label="Publicados" value={publicados} />
+          <Stat label="Programados" value={programados} />
+        </div>
+      </button>
+      <Link
+        href={`/portal/${cliente.id}`}
+        target="_blank"
+        className="inline-flex items-center gap-1 self-start border-t border-line-soft pt-3 text-[11.5px] font-semibold text-accent hover:underline"
+      >
+        Ver portal del cliente <ArrowUpRight className="h-3 w-3" />
+      </Link>
+    </div>
   );
 }
 

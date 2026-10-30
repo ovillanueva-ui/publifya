@@ -35,6 +35,12 @@ export function DetailProperties({ item }: { item: Contenido }) {
         <dd className="flex flex-wrap gap-1.5">
           {item.etiquetas.length ? item.etiquetas.map((tag) => <TagChip key={tag} label={tag} />) : <span className="text-faint">Sin etiquetas</span>}
         </dd>
+        {item.comentarioCliente && (
+          <>
+            <dt className="text-faint">Cliente pidió</dt>
+            <dd className="font-medium leading-relaxed text-ink">&ldquo;{item.comentarioCliente}&rdquo;</dd>
+          </>
+        )}
       </dl>
     </div>
   );

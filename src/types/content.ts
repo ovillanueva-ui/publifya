@@ -41,6 +41,7 @@ export interface Contenido {
   propietario: string;
   publicacion: string;
   etiquetas: string[];
+  comentarioCliente?: string;
 }
 
 export type VistaBiblioteca = "table" | "grid" | "calendar";
