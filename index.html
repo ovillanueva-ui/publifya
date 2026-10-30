@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publifya — Biblioteca de contenido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="Navegación principal">
+      <div class="sidebar-top">
+        <div class="brand-row">
+          <span class="brand-wordmark sidebar-copy">Publifya<span>.</span></span>
+          <button id="collapse-sidebar" class="icon-button desktop-collapse" type="button" aria-label="Contraer barra lateral" title="Contraer barra lateral"><i data-lucide="panel-left-close"></i></button>
+          <button id="close-mobile-sidebar" class="icon-button mobile-menu hidden" type="button" aria-label="Cerrar navegación"><i data-lucide="x"></i></button>
+        </div>
+        <div class="client-switcher">
+          <button id="client-toggle" class="client-button" type="button" aria-expanded="false">
+            <span id="client-dot-current" class="client-dot all">PF</span>
+            <span class="sidebar-copy" style="min-width:0;flex:1">
+              <span id="client-name-current" class="client-name">Todos los clientes</span>
+              <span id="client-sub-current" class="client-sub">4 cuentas activas</span>
+            </span>
+            <i data-lucide="chevrons-up-down" class="client-chevron" style="width:13px;height:13px;color:var(--faint)"></i>
+          </button>
+          <div id="client-menu" class="popup hidden" style="left:0;right:auto;top:calc(100% + 6px)"></div>
+        </div>
+      </div>
+      <nav class="nav-scroll" aria-label="Módulos">
+        <p class="section-caption sidebar-copy">Espacio de trabajo</p>
+        <button class="nav-item" data-module="Resumen" type="button"><i data-lucide="layout-dashboard"></i><span class="nav-label">Resumen</span></button>
+        <button class="nav-item active" data-module="Biblioteca de contenido" type="button"><i data-lucide="files"></i><span class="nav-label">Biblioteca de contenido</span></button>
+        <button class="nav-item" data-module="Calendario editorial" type="button"><i data-lucide="calendar-days"></i><span class="nav-label">Calendario editorial</span></button>
+        <button class="nav-item" data-module="Biblioteca multimedia" type="button"><i data-lucide="image"></i><span class="nav-label">Biblioteca multimedia</span></button>
+        <button class="nav-item" data-module="Plantillas" type="button"><i data-lucide="layout-template"></i><span class="nav-label">Plantillas</span></button>
+        <div class="sidebar-divider"></div>
+        <p class="section-caption sidebar-copy">Gestión</p>
+        <button class="nav-item" data-module="Flujo de trabajo" type="button"><i data-lucide="git-branch"></i><span class="nav-label">Flujo de trabajo</span></button>
+        <button class="nav-item" data-module="Clientes" type="button"><i data-lucide="building-2"></i><span class="nav-label">Clientes</span></button>
+        <button class="nav-item" data-module="Miembros del equipo" type="button"><i data-lucide="users-round"></i><span class="nav-label">Miembros del equipo</span></button>
+        <button class="nav-item" data-module="Configuración" type="button"><i data-lucide="settings-2"></i><span class="nav-label">Configuración</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <button id="user-toggle" class="user-card" type="button" aria-expanded="false">
+          <span class="avatar">AC</span>
+          <span class="user-copy" style="min-width:0;flex:1">
+            <span class="user-name">Alex Chen</span>
+            <span class="user-role">Administrador del espacio</span>
+          </span>
+          <i data-lucide="ellipsis" class="user-copy" style="width:14px;height:14px;color:var(--faint)"></i>
+        </button>
+        <div id="user-menu" class="popup hidden" style="bottom:calc(100% + 4px);top:auto;left:12px;right:12px">
+          <button id="user-settings" type="button">Configuración del espacio</button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="breadcrumb">
+          <button id="open-mobile-sidebar" class="icon-button mobile-menu hidden" type="button" aria-label="Abrir navegación"><i data-lucide="menu"></i></button>
+          <span>Espacio de trabajo</span>
+          <i data-lucide="chevron-right"></i>
+          <span id="breadcrumb-current" class="breadcrumb-current">Biblioteca de contenido</span>
+        </div>
+        <div class="search-wrap">
+          <i data-lucide="search"></i>
+          <label for="global-search" class="sr-only" style="position:absolute;left:-9999px">Buscar contenido</label>
+          <input id="global-search" placeholder="Buscar contenido, cliente o responsable..." />
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <button id="theme-toggle" class="icon-button" type="button" aria-label="Cambiar tema"><i data-lucide="moon"></i></button>
+          <div style="position:relative">
+            <button id="notifications-toggle" type="button" class="icon-button" aria-label="Notificaciones" aria-expanded="false"><i data-lucide="bell"></i></button>
+            <div id="notifications-menu" class="popup hidden" style="min-width:240px">
+              <p style="font-weight:700;padding:8px 10px 2px;font-size:12.5px">Notificaciones</p>
+              <p style="padding:0 10px 10px;color:var(--faint);font-size:12px">Estás al día.</p>
+            </div>
+          </div>
+          <button id="header-avatar" class="avatar" style="border:0" type="button" aria-label="Abrir menú de usuario">AC</button>
+          <span style="height:20px;width:1px;background:var(--line);margin:0 2px"></span>
+          <button id="toggle-details" class="icon-button" type="button" aria-label="Mostrar u ocultar panel de detalles" aria-expanded="true" title="Mostrar u ocultar detalles"><i data-lucide="panel-right"></i></button>
+        </div>
+      </header>
+
+      <div class="workspace-area">
+        <main class="content-area">
+
+          <section id="library-module">
+            <div class="page-head">
+              <div>
+                <p class="page-eyebrow">CONTENIDO / BIBLIOTECA</p>
+                <h1 class="page-title">Biblioteca de contenido</h1>
+                <p class="page-subtitle">Crea, organiza y gestiona el contenido de todos tus clientes.</p>
+              </div>
+              <div class="heading-actions">
+                <button id="header-filter" class="soft-button" type="button"><i data-lucide="sliders-horizontal"></i><span>Filtros</span></button>
+                <button id="new-content" class="primary-button" type="button"><i data-lucide="plus"></i><span>Nuevo contenido</span></button>
+              </div>
+            </div>
+
+            <div class="tabs-row">
+              <div class="tabs" role="tablist" aria-label="Filtrar por estado">
+                <button class="tab active" type="button" role="tab" aria-selected="true" data-filter="Todos">Todos</button>
+                <button class="tab" type="button" role="tab" aria-selected="false" data-filter="Borrador">Borradores</button>
+                <button class="tab" type="button" role="tab" aria-selected="false" data-filter="En revisión">En revisión</button>
+                <button class="tab" type="button" role="tab" aria-selected="false" data-filter="Programado">Programados</button>
+                <button class="tab" type="button" role="tab" aria-selected="false" data-filter="Publicado">Publicados</button>
+              </div>
+              <span id="result-count" class="result-count"></span>
+            </div>
+
+            <div class="filter-row" style="padding:14px 0 0">
+              <select id="filter-red" class="filter-select" aria-label="Filtrar por red social"></select>
+              <select id="filter-tipo" class="filter-select" aria-label="Filtrar por tipo de contenido"></select>
+            </div>
+
+            <div class="toolbar">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-weight:700;font-size:13.5px">Todo el contenido</span>
+                <span id="total-badge" class="badge-count"></span>
+              </div>
+              <div class="toolbar-right" style="display:flex;align-items:center;gap:8px">
+                <label for="sort-select" style="color:var(--faint);font-size:12px">Ordenar por</label>
+                <select id="sort-select" class="filter-select" aria-label="Ordenar contenido">
+                  <option value="reciente">Última actualización</option>
+                  <option value="titulo">Título A–Z</option>
+                  <option value="antiguo">Más antiguos primero</option>
+                </select>
+                <div class="view-group" role="group" aria-label="Vista de contenido">
+                  <button class="icon-button view-btn active" data-view="table" type="button" aria-label="Vista de tabla" aria-pressed="true"><i data-lucide="list"></i></button>
+                  <button class="icon-button view-btn" data-view="grid" type="button" aria-label="Vista de cuadrícula" aria-pressed="false"><i data-lucide="layout-grid"></i></button>
+                  <button class="icon-button view-btn" data-view="calendar" type="button" aria-label="Vista de calendario" aria-pressed="false"><i data-lucide="calendar-days"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div id="selection-bar" class="selection-bar" hidden>
+              <span><span id="selected-count"></span> seleccionados</span>
+              <button id="clear-selection" type="button">Limpiar selección</button>
+            </div>
+
+            <div id="table-view" class="library-card table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width:35px"><label style="position:absolute;left:-9999px" for="select-all">Seleccionar todo el contenido visible</label><input id="select-all" type="checkbox" /></th>
+                    <th style="min-width:220px">Título del contenido</th>
+                    <th>Cliente</th>
+                    <th>Estado</th>
+                    <th>Tipo</th>
+                    <th>Red</th>
+                    <th>Actualizado</th>
+                    <th>Responsable</th>
+                    <th style="width:42px"><span style="position:absolute;left:-9999px">Acciones</span></th>
+                  </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+              </table>
+            </div>
+
+            <div id="grid-view" hidden></div>
+
+            <div id="calendar-view" class="library-card" hidden style="overflow:hidden">
+              <div class="calendar-head">
+                <button id="previous-month" class="icon-button" type="button" aria-label="Mes anterior"><i data-lucide="chevron-left"></i></button>
+                <h2 id="calendar-heading"></h2>
+                <button id="next-month" class="icon-button" type="button" aria-label="Mes siguiente"><i data-lucide="chevron-right"></i></button>
+              </div>
+              <div class="calendar-days-row"><span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span></div>
+              <div id="calendar-grid" class="calendar-grid"></div>
+            </div>
+
+            <div id="empty-state" class="empty-state" hidden>Ningún contenido coincide con los filtros actuales.</div>
+
+            <p style="margin-top:20px;color:var(--faint);font-size:12px">Una vista clara de cada historia en marcha, para cada cliente.</p>
+          </section>
+
+          <section id="overview-module" hidden>
+            <div class="section-head">
+              <p class="page-eyebrow">ESPACIO DE TRABAJO</p>
+              <h1 class="page-title">Resumen</h1>
+              <p class="page-subtitle">Una vista general del contenido de tus clientes.</p>
+            </div>
+            <div id="overview-kpis" class="clients-grid"></div>
+            <h2 style="font-size:14px;font-weight:700;margin-top:30px;margin-bottom:4px;font-family:'IBM Plex Sans',sans-serif">Contenido por cliente</h2>
+            <div id="overview-clients" class="clients-grid"></div>
+          </section>
+
+          <section id="clients-module" hidden>
+            <div class="section-head">
+              <p class="page-eyebrow">GESTIÓN</p>
+              <h1 class="page-title">Clientes</h1>
+              <p class="page-subtitle">Las cuentas que administra tu equipo. Selecciona una para ver solo su contenido.</p>
+            </div>
+            <div id="clients-grid" class="clients-grid"></div>
+          </section>
+
+          <section id="other-module" hidden>
+            <p class="page-eyebrow">ESPACIO DE TRABAJO</p>
+            <h1 id="other-title" class="page-title"></h1>
+            <p id="other-description" class="page-subtitle"></p>
+            <div class="module-card">
+              <div class="doc-icon"><i data-lucide="layout-dashboard"></i></div>
+              <h2>Tu espacio de trabajo, en un solo lugar</h2>
+              <p id="other-module-copy">Selecciona la Biblioteca de contenido para gestionar tus elementos editoriales, o usa el calendario para ver el contenido programado.</p>
+              <button id="return-library" class="soft-button" type="button" style="margin-top:16px">Abrir Biblioteca de contenido</button>
+            </div>
+          </section>
+
+        </main>
+
+        <aside id="details-panel" class="details" aria-label="Detalles del contenido">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:22px">
+            <h2 style="font-size:17px;font-weight:700;font-family:'IBM Plex Sans',sans-serif">Detalles del contenido</h2>
+            <button id="close-details" class="icon-button" type="button" aria-label="Cerrar panel de detalles"><i data-lucide="x"></i></button>
+          </div>
+          <div id="details-content">
+            <div class="detail-thumb"><i data-lucide="file-text"></i></div>
+            <h3 id="detail-title" class="detail-title"></h3>
+            <p id="detail-description" class="detail-desc"></p>
+            <div class="detail-actions">
+              <button id="detail-edit" class="primary-button" type="button">Editar</button>
+              <button id="detail-preview" class="soft-button" type="button">Vista previa</button>
+            </div>
+            <div class="detail-block">
+              <h3 class="section-caption" style="margin-bottom:16px">Propiedades</h3>
+              <dl class="detail-properties">
+                <dt>Cliente</dt><dd id="detail-cliente"></dd>
+                <dt>Estado</dt><dd id="detail-status"></dd>
+                <dt>Tipo</dt><dd id="detail-type"></dd>
+                <dt>Red</dt><dd id="detail-red"></dd>
+                <dt>Responsable</dt><dd id="detail-owner"></dd>
+                <dt>Modificado</dt><dd id="detail-updated"></dd>
+                <dt>Publicación</dt><dd id="detail-publication"></dd>
+                <dt>Etiquetas</dt><dd id="detail-tags" style="display:flex;gap:5px;flex-wrap:wrap"></dd>
+              </dl>
+            </div>
+            <div class="detail-block">
+              <h3 class="section-caption" style="margin-bottom:16px">Actividad</h3>
+              <div style="display:flex;gap:10px">
+                <span class="avatar" style="width:28px;height:28px">AC</span>
+                <div>
+                  <p id="activity-text" style="font-size:12px;line-height:1.5"></p>
+                  <p id="activity-date" style="font-size:11px;color:var(--faint);margin-top:4px"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p id="details-empty" style="color:var(--faint);font-size:12.5px" hidden>Selecciona un elemento para ver sus detalles.</p>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <div id="editor-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="editor-heading">
+    <div class="modal-card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
+        <h2 id="editor-heading" style="font-size:17px;font-weight:700;font-family:'IBM Plex Sans',sans-serif"></h2>
+        <button class="icon-button close-modal" type="button" aria-label="Cerrar editor"><i data-lucide="x"></i></button>
+      </div>
+      <form id="editor-form" class="form-stack">
+        <div>
+          <label class="field-label" for="content-title">Título del contenido</label>
+          <input id="content-title" class="field" maxlength="100" required />
+        </div>
+        <div>
+          <label class="field-label" for="content-description">Descripción</label>
+          <input id="content-description" class="field" maxlength="180" />
+        </div>
+        <div class="form-grid-2">
+          <div>
+            <label class="field-label" for="content-cliente">Cliente</label>
+            <select id="content-cliente" class="field"></select>
+          </div>
+          <div>
+            <label class="field-label" for="content-tipo">Tipo de contenido</label>
+            <select id="content-tipo" class="field"></select>
+          </div>
+        </div>
+        <div class="form-grid-2">
+          <div>
+            <label class="field-label" for="content-estado">Estado</label>
+            <select id="content-estado" class="field"></select>
+          </div>
+          <div>
+            <label class="field-label" for="content-red">Red social / canal</label>
+            <select id="content-red" class="field"></select>
+          </div>
+        </div>
+        <div class="form-grid-2">
+          <div>
+            <label class="field-label" for="content-date">Fecha de publicación</label>
+            <input id="content-date" class="field" type="date" />
+          </div>
+          <div>
+            <label class="field-label" for="content-owner">Responsable</label>
+            <select id="content-owner" class="field"></select>
+          </div>
+        </div>
+        <div>
+          <label class="field-label" for="content-tags">Etiquetas <span class="field-hint">(separadas por coma)</span></label>
+          <input id="content-tags" class="field" placeholder="Editorial, Temporada" />
+        </div>
+        <div class="form-actions">
+          <button class="soft-button close-modal" type="button">Cancelar</button>
+          <button id="save-content" class="primary-button" type="submit">Crear contenido</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="preview-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="preview-heading">
+    <div class="modal-card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
+        <h2 id="preview-heading" style="font-size:15px;font-weight:700;font-family:'IBM Plex Sans',sans-serif">Vista previa del contenido</h2>
+        <button class="icon-button close-modal" type="button" aria-label="Cerrar vista previa"><i data-lucide="x"></i></button>
+      </div>
+      <div style="background:var(--surface-2);border-radius:10px;height:130px;display:flex;align-items:center;justify-content:center;color:var(--accent)">
+        <i data-lucide="file-text" style="width:34px;height:34px"></i>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:18px;flex-wrap:wrap">
+        <span id="preview-cliente"></span>
+        <span id="preview-red"></span>
+      </div>
+      <p id="preview-type" class="section-caption" style="margin-top:14px"></p>
+      <h3 id="preview-title" style="font-size:19px;font-weight:700;margin-top:6px;font-family:'IBM Plex Sans',sans-serif"></h3>
+      <p id="preview-description" style="color:var(--muted);font-size:13px;margin-top:10px;line-height:1.6"></p>
+      <p style="color:var(--faint);font-size:11.5px;margin-top:18px;border-top:1px solid var(--line);padding-top:12px">Esta vista previa muestra el resumen actual del contenido en la biblioteca.</p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden role="status"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
