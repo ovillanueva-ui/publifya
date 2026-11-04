@@ -2,12 +2,12 @@ import { create } from "zustand";
 
 interface ModalState {
   editorOpen: boolean;
-  editorId: number | null;
+  editorId: string | null;
   previewOpen: boolean;
-  previewId: number | null;
-  openEditor: (id?: number | null) => void;
+  previewId: string | null;
+  openEditor: (id?: string | null) => void;
   closeEditor: () => void;
-  openPreview: (id: number) => void;
+  openPreview: (id: string) => void;
   closePreview: () => void;
 }
 

@@ -1,26 +1,31 @@
 import { create } from "zustand";
-import { CONTENIDOS_INICIALES } from "@/data/mock-content";
+import { baseRowToContenido, contenidoToRow, rowToContenido } from "@/lib/mappers/contenido";
+import { supabase } from "@/lib/supabase/client";
+import type { ContenidoRow, VContenidoRow } from "@/types/database";
 import type { Contenido, NuevoContenido } from "@/types/content";
 
 interface ContentStoreState {
   contenidos: Contenido[];
-  selectedId: number | null;
-  checkedIds: Set<number>;
-  setSelectedId: (id: number | null) => void;
-  toggleChecked: (id: number, checked: boolean) => void;
-  setCheckedMany: (ids: number[], checked: boolean) => void;
+  status: "idle" | "loading" | "loaded" | "error";
+  selectedId: string | null;
+  checkedIds: Set<string>;
+  setSelectedId: (id: string | null) => void;
+  toggleChecked: (id: string, checked: boolean) => void;
+  setCheckedMany: (ids: string[], checked: boolean) => void;
   clearChecked: () => void;
-  createContenido: (values: NuevoContenido) => Contenido;
-  updateContenido: (id: number, values: NuevoContenido) => void;
-  deleteContenido: (id: number) => void;
-  approveContenido: (id: number) => void;
-  requestChanges: (id: number, comentario: string) => void;
+  fetchContenidos: () => Promise<void>;
+  createContenido: (values: NuevoContenido) => Promise<Contenido | null>;
+  updateContenido: (id: string, values: NuevoContenido) => Promise<void>;
+  deleteContenido: (id: string) => Promise<void>;
+  approveContenido: (id: string) => Promise<void>;
+  requestChanges: (id: string, comentario: string) => Promise<void>;
 }
 
 export const useContentStore = create<ContentStoreState>((set, get) => ({
-  contenidos: CONTENIDOS_INICIALES,
-  selectedId: CONTENIDOS_INICIALES[0]?.id ?? null,
-  checkedIds: new Set<number>(),
+  contenidos: [],
+  status: "idle",
+  selectedId: null,
+  checkedIds: new Set<string>(),
 
   setSelectedId: (id) => set({ selectedId: id }),
 
@@ -41,38 +46,66 @@ export const useContentStore = create<ContentStoreState>((set, get) => ({
 
   clearChecked: () => set({ checkedIds: new Set() }),
 
-  createContenido: (values) => {
-    const nextId = Math.max(0, ...get().contenidos.map((c) => c.id)) + 1;
-    const item: Contenido = { id: nextId, actualizado: new Date().toISOString().slice(0, 10), ...values };
+  fetchContenidos: async () => {
+    if (get().status === "loading") return;
+    set({ status: "loading" });
+    const { data, error } = await supabase.from("v_contenidos").select("*").order("updated_at", { ascending: false });
+    if (error) {
+      set({ status: "error" });
+      return;
+    }
+    const contenidos = (data as VContenidoRow[] | null ?? []).map(rowToContenido);
+    set((state) => ({
+      contenidos,
+      status: "loaded",
+      selectedId: state.selectedId ?? contenidos[0]?.id ?? null,
+    }));
+  },
+
+  createContenido: async (values) => {
+    const { data, error } = await supabase.from("contenidos").insert(contenidoToRow(values)).select().single();
+    if (error || !data) return null;
+    await supabase.rpc("set_contenido_tags", { p_contenido_id: data.id, p_nombres: values.etiquetas });
+    const item = baseRowToContenido(data, values.etiquetas);
     set((state) => ({ contenidos: [item, ...state.contenidos], selectedId: item.id }));
     return item;
   },
 
-  updateContenido: (id, values) =>
-    set((state) => ({
-      contenidos: state.contenidos.map((c) => (c.id === id ? { ...c, ...values, actualizado: new Date().toISOString().slice(0, 10) } : c)),
-    })),
+  updateContenido: async (id, values) => {
+    const { data, error } = await supabase.from("contenidos").update(contenidoToRow(values)).eq("id", id).select().single();
+    if (error || !data) return;
+    await supabase.rpc("set_contenido_tags", { p_contenido_id: id, p_nombres: values.etiquetas });
+    const item = baseRowToContenido(data, values.etiquetas);
+    set((state) => ({ contenidos: state.contenidos.map((c) => (c.id === id ? item : c)) }));
+  },
 
-  deleteContenido: (id) =>
+  deleteContenido: async (id) => {
+    const { error } = await supabase.from("contenidos").delete().eq("id", id);
+    if (error) return;
     set((state) => {
       const contenidos = state.contenidos.filter((c) => c.id !== id);
       const checkedIds = new Set(state.checkedIds);
       checkedIds.delete(id);
       const selectedId = state.selectedId === id ? contenidos[0]?.id ?? null : state.selectedId;
       return { contenidos, checkedIds, selectedId };
-    }),
+    });
+  },
 
-  approveContenido: (id) =>
+  approveContenido: async (id) => {
+    const { data, error } = await supabase.rpc("approve_content", { p_contenido_id: id }).select().single();
+    if (error || !data) return;
+    const row = data as ContenidoRow;
     set((state) => ({
-      contenidos: state.contenidos.map((c) =>
-        c.id === id ? { ...c, estado: "Programado", comentarioCliente: undefined, actualizado: new Date().toISOString().slice(0, 10) } : c
-      ),
-    })),
+      contenidos: state.contenidos.map((c) => (c.id === id ? { ...baseRowToContenido(row, c.etiquetas), comentarioCliente: undefined } : c)),
+    }));
+  },
 
-  requestChanges: (id, comentario) =>
+  requestChanges: async (id, comentario) => {
+    const { data, error } = await supabase.rpc("request_content_changes", { p_contenido_id: id, p_comentario: comentario }).select().single();
+    if (error || !data) return;
+    const row = data as ContenidoRow;
     set((state) => ({
-      contenidos: state.contenidos.map((c) =>
-        c.id === id ? { ...c, estado: "Borrador", comentarioCliente: comentario, actualizado: new Date().toISOString().slice(0, 10) } : c
-      ),
-    })),
+      contenidos: state.contenidos.map((c) => (c.id === id ? baseRowToContenido(row, c.etiquetas) : c)),
+    }));
+  },
 }));

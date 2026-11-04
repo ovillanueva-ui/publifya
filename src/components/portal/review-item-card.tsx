@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { formatDate } from "@/lib/format-date";
-import { NetworkBadge } from "@/components/ui/network-badge";
+import { NetworkBadgeList } from "@/components/ui/network-badge-list";
 import { PrimaryButton } from "@/components/ui/primary-button";
 import { SoftButton } from "@/components/ui/soft-button";
 import { TagChip } from "@/components/ui/tag-chip";
@@ -25,11 +25,11 @@ export function ReviewItemCard({ item }: { item: Contenido }) {
           <span className="block text-sm font-bold text-ink">{item.titulo}</span>
           <span className="mt-1 block text-[12.5px] text-muted">{item.descripcion}</span>
         </div>
-        <NetworkBadge redId={item.red} />
+        <NetworkBadgeList redIds={item.redes} />
       </div>
 
       <div className="mt-3 flex flex-wrap items-center gap-2 text-[11.5px] text-faint">
-        <span>{item.tipo}</span>
+        <span>{item.formato ?? item.tipoEditorial ?? "Sin definir"}</span>
         {item.publicacion && <span>· Programado para el {formatDate(item.publicacion)}</span>}
       </div>
 

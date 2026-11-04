@@ -2,7 +2,7 @@ import type { LucideIcon } from "lucide-react";
 
 export type EstadoContenido = "Borrador" | "En revisión" | "Programado" | "Publicado";
 
-export type TipoContenido =
+export type FormatoContenido =
   | "Publicación"
   | "Historia"
   | "Reel"
@@ -11,6 +11,10 @@ export type TipoContenido =
   | "Artículo"
   | "Newsletter"
   | "Infografía";
+
+export type TipoEditorial = "Educativo" | "Informativo" | "Entretenimiento" | "Comunidad" | "Promocional";
+
+export type PesoContenido = "valor" | "servicio";
 
 export type RedId = "instagram" | "facebook" | "tiktok" | "x" | "linkedin" | "youtube" | "blog" | "email" | "web";
 
@@ -30,13 +34,19 @@ export interface Red {
 }
 
 export interface Contenido {
-  id: number;
+  id: string;
   clienteId: string;
   titulo: string;
   descripcion: string;
   estado: EstadoContenido;
-  tipo: TipoContenido;
-  red: RedId;
+  formato: FormatoContenido | null;
+  tipoEditorial: TipoEditorial | null;
+  redes: RedId[];
+  peso: PesoContenido | null;
+  enfoque: string | null;
+  copyCompleto: string | null;
+  hashtags: string[] | null;
+  cta: string | null;
   actualizado: string;
   propietario: string;
   publicacion: string;

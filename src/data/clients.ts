@@ -1,12 +1,9 @@
 import type { Cliente } from "@/types/content";
 
-export const CLIENTES: Cliente[] = [
-  { id: "cafe-luna", nombre: "Café Luna", sector: "Cafetería de especialidad", color: "#2F6F5E", iniciales: "CL" },
-  { id: "moda-urbana", nombre: "Moda Urbana", sector: "Streetwear", color: "#B5533C", iniciales: "MU" },
-  { id: "estudio-verde", nombre: "Estudio Verde", sector: "Arquitectura sostenible", color: "#5B7B4F", iniciales: "EV" },
-  { id: "northstar-fit", nombre: "Northstar Fit", sector: "Estudio de entrenamiento", color: "#A0802E", iniciales: "NF" },
-];
+export { useClientsStore } from "@/store/clients-store";
 
-export function clienteById(id: string): Cliente | undefined {
-  return CLIENTES.find((c) => c.id === id);
+/** Busca un cliente dentro de una lista ya cargada — para usar dentro de callbacks (map/filter)
+ * donde no se puede llamar al hook `useClientsStore` directamente. */
+export function findCliente(clientes: Cliente[], id: string): Cliente | undefined {
+  return clientes.find((c) => c.id === id);
 }

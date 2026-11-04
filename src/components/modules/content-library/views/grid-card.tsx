@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { formatDate } from "@/lib/format-date";
 import { ClientTag } from "@/components/ui/client-tag";
-import { NetworkBadge } from "@/components/ui/network-badge";
+import { NetworkBadgeList } from "@/components/ui/network-badge-list";
 import { StatusPill } from "@/components/ui/status-pill";
 import { useContentStore } from "@/store/content-store";
 import type { Contenido } from "@/types/content";
@@ -26,7 +26,7 @@ export function GridCard({ item }: { item: Contenido }) {
       <span className="text-[13px] font-bold leading-snug text-ink">{item.titulo}</span>
       <span className="h-9 overflow-hidden text-xs leading-relaxed text-muted">{item.descripcion}</span>
       <div className="flex items-center justify-between gap-2 text-[11px] text-faint">
-        <NetworkBadge redId={item.red} />
+        <NetworkBadgeList redIds={item.redes} />
         <span>{formatDate(item.actualizado)}</span>
       </div>
     </button>

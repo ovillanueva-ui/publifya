@@ -1,9 +1,10 @@
 import { useMemo } from "react";
-import { clienteById } from "@/data/clients";
+import { findCliente } from "@/data/clients";
 import { useClientStore } from "@/store/client-store";
+import { useClientsStore } from "@/store/clients-store";
 import { useContentStore } from "@/store/content-store";
 import { useLibraryFiltersStore } from "@/store/library-filters-store";
-import type { Contenido } from "@/types/content";
+import type { Contenido, RedId } from "@/types/content";
 
 export function matchesActiveClient(item: Contenido, activeClientId: string): boolean {
   return activeClientId === "all" || item.clienteId === activeClientId;
@@ -19,6 +20,7 @@ export function useClientScopedContent(): Contenido[] {
 /** Lista final que se muestra en la biblioteca de contenido: cliente activo + filtros + orden. */
 export function useFilteredContent(): Contenido[] {
   const scoped = useClientScopedContent();
+  const clientes = useClientsStore((s) => s.clientes);
   const { query, estado, red, tipo, sort } = useLibraryFiltersStore();
 
   return useMemo(() => {
@@ -26,11 +28,11 @@ export function useFilteredContent(): Contenido[] {
     return scoped
       .filter((item) => {
         if (estado !== "Todos" && item.estado !== estado) return false;
-        if (red !== "all" && item.red !== red) return false;
-        if (tipo !== "all" && item.tipo !== tipo) return false;
+        if (red !== "all" && !item.redes.includes(red as RedId)) return false;
+        if (tipo !== "all" && item.formato !== tipo) return false;
         if (q) {
-          const clienteNombre = clienteById(item.clienteId)?.nombre ?? "";
-          const haystack = [item.titulo, item.descripcion, item.tipo, clienteNombre, item.propietario].join(" ").toLowerCase();
+          const clienteNombre = findCliente(clientes, item.clienteId)?.nombre ?? "";
+          const haystack = [item.titulo, item.descripcion, item.formato ?? "", clienteNombre, item.propietario].join(" ").toLowerCase();
           if (!haystack.includes(q)) return false;
         }
         return true;
@@ -40,5 +42,5 @@ export function useFilteredContent(): Contenido[] {
         if (sort === "antiguo") return a.actualizado.localeCompare(b.actualizado);
         return b.actualizado.localeCompare(a.actualizado);
       });
-  }, [scoped, query, estado, red, tipo, sort]);
+  }, [scoped, clientes, query, estado, red, tipo, sort]);
 }

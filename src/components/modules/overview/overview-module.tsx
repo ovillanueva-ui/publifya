@@ -1,5 +1,5 @@
-import { CLIENTES } from "@/data/clients";
 import { useClientStore } from "@/store/client-store";
+import { useClientsStore } from "@/store/clients-store";
 import { useClientScopedContent } from "@/hooks/use-filtered-content";
 import { ClientBreakdownCard } from "./client-breakdown-card";
 import { KpiCard } from "./kpi-card";
@@ -7,6 +7,7 @@ import { KpiCard } from "./kpi-card";
 export function OverviewModule() {
   const list = useClientScopedContent();
   const activeClientId = useClientStore((s) => s.activeClientId);
+  const clientes = useClientsStore((s) => s.clientes);
 
   const kpis = [
     { label: "Contenidos totales", value: list.length },
@@ -15,7 +16,7 @@ export function OverviewModule() {
     { label: "En revisión", value: list.filter((i) => i.estado === "En revisión").length },
   ];
 
-  const porCliente = CLIENTES.filter((c) => activeClientId === "all" || c.id === activeClientId).map((c) => ({
+  const porCliente = clientes.filter((c) => activeClientId === "all" || c.id === activeClientId).map((c) => ({
     cliente: c,
     total: list.filter((i) => i.clienteId === c.id).length,
   }));

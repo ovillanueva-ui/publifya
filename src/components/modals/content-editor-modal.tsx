@@ -2,30 +2,37 @@
 
 import { useState, type FormEvent } from "react";
 import { X } from "lucide-react";
-import { CLIENTES } from "@/data/clients";
-import { ESTADOS, TIPOS } from "@/data/content-types";
-import { REDES } from "@/data/networks";
+import { ESTADOS, PESOS, TIPOS, TIPOS_EDITORIAL } from "@/data/content-types";
 import { EQUIPO } from "@/data/team";
 import { FieldLabel } from "@/components/ui/field-label";
 import { IconButton } from "@/components/ui/icon-button";
+import { NetworkMultiSelect } from "@/components/ui/network-multiselect";
 import { PrimaryButton } from "@/components/ui/primary-button";
 import { SelectField } from "@/components/ui/select-field";
 import { SoftButton } from "@/components/ui/soft-button";
 import { TextField } from "@/components/ui/text-field";
+import { TextareaField } from "@/components/ui/textarea-field";
 import { useClientStore } from "@/store/client-store";
+import { useClientsStore } from "@/store/clients-store";
 import { useContentStore } from "@/store/content-store";
 import { useModalStore } from "@/store/modal-store";
 import { useToastStore } from "@/store/toast-store";
-import type { Contenido, EstadoContenido, NuevoContenido, RedId, TipoContenido } from "@/types/content";
+import type { Contenido, EstadoContenido, FormatoContenido, NuevoContenido, PesoContenido, RedId, TipoEditorial } from "@/types/content";
 import { Modal } from "./modal";
 
 const EMPTY_FORM: NuevoContenido = {
-  clienteId: CLIENTES[0].id,
+  clienteId: "",
   titulo: "",
   descripcion: "",
   estado: "Borrador",
-  tipo: "Publicación",
-  red: "instagram",
+  formato: "Publicación",
+  tipoEditorial: null,
+  redes: [],
+  peso: null,
+  enfoque: null,
+  copyCompleto: null,
+  hashtags: null,
+  cta: null,
   propietario: EQUIPO[0],
   publicacion: "",
   etiquetas: [],
@@ -33,24 +40,32 @@ const EMPTY_FORM: NuevoContenido = {
 
 function formFromItem(item: Contenido | undefined, fallbackClienteId: string): NuevoContenido {
   if (!item) return { ...EMPTY_FORM, clienteId: fallbackClienteId };
-  const { clienteId, titulo, descripcion, estado, tipo, red, propietario, publicacion, etiquetas } = item;
-  return { clienteId, titulo, descripcion, estado, tipo, red, propietario, publicacion, etiquetas };
+  const {
+    clienteId, titulo, descripcion, estado, formato, tipoEditorial, redes, peso, enfoque, copyCompleto, hashtags, cta, propietario, publicacion, etiquetas,
+  } = item;
+  return { clienteId, titulo, descripcion, estado, formato, tipoEditorial, redes, peso, enfoque, copyCompleto, hashtags, cta, propietario, publicacion, etiquetas };
 }
 
 /** Se remonta cada vez que el modal se abre (Modal no renderiza children cuando está cerrado), así el formulario siempre arranca con datos frescos sin necesitar un efecto. */
-function EditorForm({ editorId, onClose }: { editorId: number | null; onClose: () => void }) {
+function EditorForm({ editorId, onClose }: { editorId: string | null; onClose: () => void }) {
   const activeClientId = useClientStore((s) => s.activeClientId);
+  const clientes = useClientsStore((s) => s.clientes);
   const existing = useContentStore((s) => s.contenidos.find((c) => c.id === editorId));
   const createContenido = useContentStore((s) => s.createContenido);
   const updateContenido = useContentStore((s) => s.updateContenido);
   const showToast = useToastStore((s) => s.show);
 
-  const [form, setForm] = useState<NuevoContenido>(() => formFromItem(existing, activeClientId !== "all" ? activeClientId : CLIENTES[0].id));
+  const [form, setForm] = useState<NuevoContenido>(() =>
+    formFromItem(existing, activeClientId !== "all" ? activeClientId : clientes[0]?.id ?? "")
+  );
   const [tagsInput, setTagsInput] = useState(() => (existing ? existing.etiquetas.join(", ") : ""));
+  const [hashtagsInput, setHashtagsInput] = useState(() => (existing?.hashtags ?? []).join(", "));
+  const [submitting, setSubmitting] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    if (!form.titulo.trim()) return;
+    if (!form.titulo.trim() || !form.clienteId) return;
+    setSubmitting(true);
     const values: NuevoContenido = {
       ...form,
       titulo: form.titulo.trim(),
@@ -59,14 +74,19 @@ function EditorForm({ editorId, onClose }: { editorId: number | null; onClose: (
         .split(",")
         .map((t) => t.trim())
         .filter(Boolean),
+      hashtags: hashtagsInput
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean),
     };
     if (editorId !== null) {
-      updateContenido(editorId, values);
+      await updateContenido(editorId, values);
       showToast("Contenido actualizado");
     } else {
-      createContenido(values);
+      await createContenido(values);
       showToast("Contenido creado");
     }
+    setSubmitting(false);
     onClose();
   }
 
@@ -91,7 +111,7 @@ function EditorForm({ editorId, onClose }: { editorId: number | null; onClose: (
           />
         </div>
         <div>
-          <FieldLabel htmlFor="content-description">Descripción</FieldLabel>
+          <FieldLabel htmlFor="content-description">Descripción / gancho</FieldLabel>
           <TextField
             id="content-description"
             maxLength={180}
@@ -99,11 +119,25 @@ function EditorForm({ editorId, onClose }: { editorId: number | null; onClose: (
             onChange={(e) => setForm({ ...form, descripcion: e.target.value })}
           />
         </div>
+        <div>
+          <FieldLabel htmlFor="content-copy" hint="(opcional)">
+            Copy completo
+          </FieldLabel>
+          <TextareaField
+            id="content-copy"
+            rows={4}
+            value={form.copyCompleto ?? ""}
+            onChange={(e) => setForm({ ...form, copyCompleto: e.target.value || null })}
+          />
+        </div>
         <div className="grid grid-cols-2 gap-3">
           <div>
             <FieldLabel htmlFor="content-cliente">Cliente</FieldLabel>
-            <SelectField id="content-cliente" value={form.clienteId} onChange={(e) => setForm({ ...form, clienteId: e.target.value })}>
-              {CLIENTES.map((c) => (
+            <SelectField id="content-cliente" required value={form.clienteId} onChange={(e) => setForm({ ...form, clienteId: e.target.value })}>
+              <option value="" disabled>
+                Selecciona un cliente
+              </option>
+              {clientes.map((c) => (
                 <option key={c.id} value={c.id}>
                   {c.nombre}
                 </option>
@@ -111,8 +145,12 @@ function EditorForm({ editorId, onClose }: { editorId: number | null; onClose: (
             </SelectField>
           </div>
           <div>
-            <FieldLabel htmlFor="content-tipo">Tipo de contenido</FieldLabel>
-            <SelectField id="content-tipo" value={form.tipo} onChange={(e) => setForm({ ...form, tipo: e.target.value as TipoContenido })}>
+            <FieldLabel htmlFor="content-formato">Formato</FieldLabel>
+            <SelectField
+              id="content-formato"
+              value={form.formato ?? ""}
+              onChange={(e) => setForm({ ...form, formato: e.target.value as FormatoContenido })}
+            >
               {TIPOS.map((t) => (
                 <option key={t} value={t}>
                   {t}
@@ -120,6 +158,46 @@ function EditorForm({ editorId, onClose }: { editorId: number | null; onClose: (
               ))}
             </SelectField>
           </div>
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <FieldLabel htmlFor="content-tipo-editorial" hint="(opcional)">
+              Tipo editorial
+            </FieldLabel>
+            <SelectField
+              id="content-tipo-editorial"
+              value={form.tipoEditorial ?? ""}
+              onChange={(e) => setForm({ ...form, tipoEditorial: (e.target.value || null) as TipoEditorial | null })}
+            >
+              <option value="">Sin clasificar</option>
+              {TIPOS_EDITORIAL.map((t) => (
+                <option key={t} value={t}>
+                  {t}
+                </option>
+              ))}
+            </SelectField>
+          </div>
+          <div>
+            <FieldLabel htmlFor="content-peso" hint="(opcional)">
+              Peso
+            </FieldLabel>
+            <SelectField
+              id="content-peso"
+              value={form.peso ?? ""}
+              onChange={(e) => setForm({ ...form, peso: (e.target.value || null) as PesoContenido | null })}
+            >
+              <option value="">Sin clasificar</option>
+              {PESOS.map((p) => (
+                <option key={p} value={p}>
+                  {p === "valor" ? "Valor" : "Servicio"}
+                </option>
+              ))}
+            </SelectField>
+          </div>
+        </div>
+        <div>
+          <FieldLabel>Redes sociales / canal</FieldLabel>
+          <NetworkMultiSelect value={form.redes} onChange={(redes: RedId[]) => setForm({ ...form, redes })} />
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div>
@@ -133,31 +211,33 @@ function EditorForm({ editorId, onClose }: { editorId: number | null; onClose: (
             </SelectField>
           </div>
           <div>
-            <FieldLabel htmlFor="content-red">Red social / canal</FieldLabel>
-            <SelectField id="content-red" value={form.red} onChange={(e) => setForm({ ...form, red: e.target.value as RedId })}>
-              {REDES.map((r) => (
-                <option key={r.id} value={r.id}>
-                  {r.nombre}
-                </option>
-              ))}
-            </SelectField>
+            <FieldLabel htmlFor="content-date">Fecha de publicación</FieldLabel>
+            <TextField id="content-date" type="date" value={form.publicacion} onChange={(e) => setForm({ ...form, publicacion: e.target.value })} />
           </div>
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <FieldLabel htmlFor="content-date">Fecha de publicación</FieldLabel>
-            <TextField id="content-date" type="date" value={form.publicacion} onChange={(e) => setForm({ ...form, publicacion: e.target.value })} />
+            <FieldLabel htmlFor="content-enfoque" hint="(opcional)">
+              Enfoque
+            </FieldLabel>
+            <TextField id="content-enfoque" value={form.enfoque ?? ""} onChange={(e) => setForm({ ...form, enfoque: e.target.value || null })} />
           </div>
           <div>
-            <FieldLabel htmlFor="content-owner">Responsable</FieldLabel>
-            <SelectField id="content-owner" value={form.propietario} onChange={(e) => setForm({ ...form, propietario: e.target.value })}>
-              {EQUIPO.map((p) => (
-                <option key={p} value={p}>
-                  {p}
-                </option>
-              ))}
-            </SelectField>
+            <FieldLabel htmlFor="content-cta" hint="(opcional)">
+              CTA
+            </FieldLabel>
+            <TextField id="content-cta" value={form.cta ?? ""} onChange={(e) => setForm({ ...form, cta: e.target.value || null })} />
           </div>
+        </div>
+        <div>
+          <FieldLabel htmlFor="content-owner">Responsable</FieldLabel>
+          <SelectField id="content-owner" value={form.propietario} onChange={(e) => setForm({ ...form, propietario: e.target.value })}>
+            {EQUIPO.map((p) => (
+              <option key={p} value={p}>
+                {p}
+              </option>
+            ))}
+          </SelectField>
         </div>
         <div>
           <FieldLabel htmlFor="content-tags" hint="(separadas por coma)">
@@ -165,11 +245,19 @@ function EditorForm({ editorId, onClose }: { editorId: number | null; onClose: (
           </FieldLabel>
           <TextField id="content-tags" placeholder="Editorial, Temporada" value={tagsInput} onChange={(e) => setTagsInput(e.target.value)} />
         </div>
+        <div>
+          <FieldLabel htmlFor="content-hashtags" hint="(separados por coma, opcional)">
+            Hashtags
+          </FieldLabel>
+          <TextField id="content-hashtags" placeholder="#nutricion, #saludmetabolica" value={hashtagsInput} onChange={(e) => setHashtagsInput(e.target.value)} />
+        </div>
         <div className="flex justify-end gap-2 pt-1.5">
           <SoftButton type="button" onClick={onClose}>
             Cancelar
           </SoftButton>
-          <PrimaryButton type="submit">{editorId !== null ? "Guardar cambios" : "Crear contenido"}</PrimaryButton>
+          <PrimaryButton type="submit" disabled={submitting}>
+            {editorId !== null ? "Guardar cambios" : "Crear contenido"}
+          </PrimaryButton>
         </div>
       </form>
     </>

@@ -1,11 +1,12 @@
-import { CLIENTES } from "@/data/clients";
 import { PopupMenuItem } from "@/components/ui/popup-menu-item";
 import { PopupPanel } from "@/components/ui/popup-panel";
 import { useClientStore } from "@/store/client-store";
+import { useClientsStore } from "@/store/clients-store";
 
 export function ClientMenu({ onPick }: { onPick: () => void }) {
   const activeClientId = useClientStore((s) => s.activeClientId);
   const setActiveClient = useClientStore((s) => s.setActiveClient);
+  const clientes = useClientsStore((s) => s.clientes);
 
   return (
     <PopupPanel className="left-0 top-[calc(100%+6px)]">
@@ -17,7 +18,7 @@ export function ClientMenu({ onPick }: { onPick: () => void }) {
       >
         {activeClientId === "all" ? "✓ " : ""}Todos los clientes
       </PopupMenuItem>
-      {CLIENTES.map((cliente) => (
+      {clientes.map((cliente) => (
         <PopupMenuItem
           key={cliente.id}
           onClick={() => {

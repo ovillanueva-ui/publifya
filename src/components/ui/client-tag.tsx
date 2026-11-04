@@ -1,7 +1,9 @@
-import { clienteById } from "@/data/clients";
+import { findCliente } from "@/data/clients";
+import { useClientsStore } from "@/store/clients-store";
 
 export function ClientTag({ clienteId }: { clienteId: string }) {
-  const cliente = clienteById(clienteId);
+  const clientes = useClientsStore((s) => s.clientes);
+  const cliente = findCliente(clientes, clienteId);
   if (!cliente) return null;
   return (
     <span className="inline-flex items-center gap-1.5 whitespace-nowrap text-xs font-semibold text-ink">

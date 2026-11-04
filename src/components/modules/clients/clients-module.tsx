@@ -1,7 +1,8 @@
-import { CLIENTES } from "@/data/clients";
+import { useClientsStore } from "@/store/clients-store";
 import { ClientCard } from "./client-card";
 
 export function ClientsModule() {
+  const clientes = useClientsStore((s) => s.clientes);
   return (
     <section>
       <p className="mb-2.5 text-[10.5px] font-bold uppercase tracking-[0.11em] text-faint">GESTIÓN</p>
@@ -9,7 +10,7 @@ export function ClientsModule() {
       <p className="mt-1.5 text-[13.5px] text-muted">Las cuentas que administra tu equipo. Selecciona una para ver solo su contenido.</p>
 
       <div className="mt-7 grid grid-cols-1 gap-3.5 sm:grid-cols-2 xl:grid-cols-4">
-        {CLIENTES.map((cliente) => (
+        {clientes.map((cliente) => (
           <ClientCard key={cliente.id} cliente={cliente} />
         ))}
       </div>

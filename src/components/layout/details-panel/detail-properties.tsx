@@ -1,6 +1,6 @@
 import { formatDate } from "@/lib/format-date";
 import { ClientTag } from "@/components/ui/client-tag";
-import { NetworkBadge } from "@/components/ui/network-badge";
+import { NetworkBadgeList } from "@/components/ui/network-badge-list";
 import { SectionCaption } from "@/components/ui/section-caption";
 import { StatusPill } from "@/components/ui/status-pill";
 import { TagChip } from "@/components/ui/tag-chip";
@@ -19,11 +19,11 @@ export function DetailProperties({ item }: { item: Contenido }) {
         <dd>
           <StatusPill estado={item.estado} />
         </dd>
-        <dt className="text-faint">Tipo</dt>
-        <dd className="font-semibold text-ink">{item.tipo}</dd>
-        <dt className="text-faint">Red</dt>
+        <dt className="text-faint">Formato</dt>
+        <dd className="font-semibold text-ink">{item.formato ?? "Sin definir"}</dd>
+        <dt className="text-faint">Redes</dt>
         <dd>
-          <NetworkBadge redId={item.red} />
+          <NetworkBadgeList redIds={item.redes} />
         </dd>
         <dt className="text-faint">Responsable</dt>
         <dd className="font-semibold text-ink">{item.propietario}</dd>

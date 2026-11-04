@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/format-date";
 import { initialsOf } from "@/lib/initials";
 import { Avatar } from "@/components/ui/avatar";
 import { ClientTag } from "@/components/ui/client-tag";
-import { NetworkBadge } from "@/components/ui/network-badge";
+import { NetworkBadgeList } from "@/components/ui/network-badge-list";
 import { StatusPill } from "@/components/ui/status-pill";
 import { useContentStore } from "@/store/content-store";
 import type { Contenido } from "@/types/content";
@@ -47,10 +47,10 @@ export function TableRow({ item }: { item: Contenido }) {
         <StatusPill estado={item.estado} />
       </td>
       <td className="whitespace-nowrap border-b border-line-soft px-3 py-[15px] text-[12.5px] text-muted" onClick={() => setSelectedId(item.id)}>
-        {item.tipo}
+        {item.formato ?? item.tipoEditorial ?? "—"}
       </td>
       <td className="border-b border-line-soft px-3 py-[15px]" onClick={() => setSelectedId(item.id)}>
-        <NetworkBadge redId={item.red} />
+        <NetworkBadgeList redIds={item.redes} />
       </td>
       <td className="whitespace-nowrap border-b border-line-soft px-3 py-[15px] text-[12.5px] text-muted" onClick={() => setSelectedId(item.id)}>
         {formatDate(item.actualizado)}

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { Sidebar } from "@/components/layout/sidebar/sidebar";
 import { Topbar } from "@/components/layout/topbar/topbar";
 import { DetailsPanel } from "@/components/layout/details-panel/details-panel";
@@ -11,6 +12,8 @@ import { ContentEditorModal } from "@/components/modals/content-editor-modal";
 import { ContentPreviewModal } from "@/components/modals/content-preview-modal";
 import { Toast } from "@/components/ui/toast";
 import { useSyncSelectionWithClient } from "@/hooks/use-sync-selection-with-client";
+import { useClientsStore } from "@/store/clients-store";
+import { useContentStore } from "@/store/content-store";
 import { useUiStore } from "@/store/ui-store";
 
 function ActiveModule() {
@@ -31,6 +34,10 @@ function ActiveModule() {
 
 export function AppShell() {
   useSyncSelectionWithClient();
+  useEffect(() => {
+    useClientsStore.getState().fetchClientes();
+    useContentStore.getState().fetchContenidos();
+  }, []);
   const mobileSidebarOpen = useUiStore((s) => s.mobileSidebarOpen);
   const setMobileSidebarOpen = useUiStore((s) => s.setMobileSidebarOpen);
   const activeModule = useUiStore((s) => s.activeModule);
