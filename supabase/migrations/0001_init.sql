@@ -1,18 +1,18 @@
--- Publifya MVP schema.
--- Builds on supabase/schema-proposal.md, adjusted to: no auth (no `profiles`/`client_users`,
--- RLS stays enabled but permissive for the anon key), `redes` as an array instead of a single
--- `red`, tags normalized into their own table (uppercase-enforced), and the extra fields needed
--- to represent a real editorial content grid (tipo_editorial, peso, enfoque, copy_completo,
--- hashtags, cta).
+-- Esquema MVP de Publifya.
+-- Construido sobre supabase/schema-proposal.md, ajustado para: sin autenticación (sin
+-- `profiles`/`client_users`, RLS queda habilitado pero permisivo para la anon key), `redes`
+-- como array en vez de una sola `red`, etiquetas normalizadas en su propia tabla (mayúsculas
+-- forzadas), y los campos extra necesarios para representar una parrilla editorial real
+-- (tipo_editorial, peso, enfoque, copy_completo, hashtags, cta).
 --
--- Run this once in the Supabase SQL editor (or via `supabase db push`), then supabase/seed.sql.
+-- Correr una vez en el SQL editor de Supabase (o vía `supabase db push`), luego supabase/seed.sql.
 
 create extension if not exists pgcrypto;
 create extension if not exists moddatetime schema extensions;
 
 -- ---------------------------------------------------------------------------
--- Enums — same literal values as the TypeScript union types (incl. accents),
--- so no enum<->label mapping layer is needed anywhere in the app.
+-- Enums — mismos valores literales que los union types de TypeScript (incl. acentos),
+-- así no se necesita capa de mapeo enum<->etiqueta en ningún lado de la app.
 -- ---------------------------------------------------------------------------
 
 create type estado_contenido as enum ('Borrador', 'En revisión', 'Programado', 'Publicado');

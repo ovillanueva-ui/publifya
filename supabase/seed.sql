@@ -1,8 +1,8 @@
--- Seed data for the Publifya MVP.
--- Run after supabase/migrations/0001_init.sql.
+-- Datos de siembra para el MVP de Publifya.
+-- Correr después de supabase/migrations/0001_init.sql.
 --
--- Solo contiene al cliente real: la nutrióloga, con su parrilla de 3 meses (Nov 2026 / Dec
--- 2026 / Jan 2027, 26 piezas), de "Parrilla de contenido Nutrióloga (Nov 2026 - Ene 2027).docx"
+-- Solo contiene al cliente real: la nutrióloga, con su parrilla de 3 meses (nov 2026 / dic
+-- 2026 / ene 2027, 26 piezas), de "Parrilla de contenido Nutrióloga (Nov 2026 - Ene 2027).docx"
 -- — el primer ejercicio real de cada columna nueva (tipo_editorial, peso, enfoque, cta, redes
 -- como array). `copy_completo` y `hashtags` quedan en null a propósito: según la propia sección
 -- "Pendientes y siguientes pasos" del documento fuente, el copy completo + hashtags son el

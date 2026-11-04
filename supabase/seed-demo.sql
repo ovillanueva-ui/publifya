@@ -1,8 +1,8 @@
--- OPTIONAL dev/demo fixture — NOT part of the real seed path (supabase/seed.sql).
--- The 4 original demo clients (Café Luna, Moda Urbana, Estudio Verde, Northstar Fit) were
--- always a frontend mockup, never a real account — the production app should only contain
--- the real client (nutriologa). Kept here only in case local development wants some extra
--- sample data to click through. Run manually if/when needed; do not run against production.
+-- Fixture OPCIONAL de desarrollo/demo — NO es parte del seed real (supabase/seed.sql).
+-- Los 4 clientes demo originales (Café Luna, Moda Urbana, Estudio Verde, Northstar Fit) siempre
+-- fueron mockup de frontend, nunca una cuenta real — la app en producción solo debe tener al
+-- cliente real (nutriologa). Se conserva aquí solo por si el desarrollo local quiere datos de
+-- muestra extra para navegar. Correr manualmente si hace falta; no correr contra producción.
 
 -- ============================================================================
 -- Clientes demo

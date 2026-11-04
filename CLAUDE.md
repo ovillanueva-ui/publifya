@@ -1,58 +1,58 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Este archivo da contexto a Claude Code (claude.ai/code) para trabajar en este repositorio.
 
-## What this is
+## Qué es esto
 
-Publifya: a CMS for an agency managing social content for multiple end clients. Backed by Supabase (Postgres) — see "Data layer" below. `supabase/schema-proposal.md` is the original historical design doc (kept for context); the schema actually implemented is `supabase/migrations/0001_init.sql` + `supabase/seed.sql`. No auth yet: both the admin panel and the client portal are open access, same trust model as the old mock-data version — portal mutations (approve/request changes) go through Postgres RPCs instead of raw `UPDATE` to keep the business rule enforced without a login.
+Publifya: un CMS para una agencia que administra contenido social de múltiples clientes finales. Respaldado por Supabase (Postgres) — ver "Capa de datos" abajo. `supabase/schema-proposal.md` es el documento de diseño histórico original (se conserva como contexto); el esquema realmente implementado es `supabase/migrations/0001_init.sql` + `supabase/seed.sql`. Sin autenticación todavía: tanto el panel admin como el portal de clientes son de acceso abierto, mismo modelo de confianza que la versión anterior con datos mock — las mutaciones del portal (aprobar/pedir cambios) pasan por funciones RPC de Postgres en vez de un `UPDATE` directo, para mantener la regla de negocio aunque no haya login.
 
 ## Pendientes
 
 - **Verificar front Publifya vs publifyacopia** (agregado 2026-11-04): existe una copia del proyecto en `C:\Users\ra-cs\proyectos\publifyacopia` con mejor front y diseño. Falta comparar y decidir qué llevarse de ahí a este repo. **Nota: solo front/diseño** — no portar su lógica de datos/backend, este repo ya tiene su propio esquema de Supabase funcionando.
 
-## Commands
+## Comandos
 
 ```bash
-npm run dev      # dev server (Turbopack). Picks the next free port if 3000 is busy — read its "Local:" line, don't assume 3000.
-npm run build    # production build; also runs the TypeScript check and prerenders static params
+npm run dev      # servidor de desarrollo (Turbopack). Toma el siguiente puerto libre si el 3000 está ocupado — lee la línea "Local:", no asumas 3000.
+npm run build    # build de producción; también corre el chequeo de TypeScript y prerrenderiza los params estáticos
 npm run lint     # eslint (flat config, eslint-config-next)
-npx tsc --noEmit # type-check only, faster than a full build
+npx tsc --noEmit # solo chequeo de tipos, más rápido que un build completo
 ```
 
-Requires `.env.local` with `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` (Project Settings → API in Supabase) — `npm run build`/`npm run dev` throw at module load without them (`src/lib/supabase/client.ts`). On Vercel these must be set in Project Settings → Environment Variables; `.env.local` is gitignored and never reaches a deploy on its own.
+Requiere `.env.local` con `NEXT_PUBLIC_SUPABASE_URL` y `NEXT_PUBLIC_SUPABASE_ANON_KEY` (Project Settings → API en Supabase) — `npm run build`/`npm run dev` truenan al cargar el módulo si faltan (`src/lib/supabase/client.ts`). En Vercel, estas deben configurarse en Project Settings → Environment Variables; `.env.local` está en `.gitignore` y nunca llega solo a un deploy.
 
-There is no test setup in this repo (no Jest/Vitest config, no test files).
+No hay configuración de tests en este repo (sin Jest/Vitest, sin archivos de test).
 
-`legacy-static-prototype/` is excluded from lint (see `eslint.config.mjs` ignores) — it's a vanilla HTML/CSS/JS mockup kept only as a visual reference, not part of the Next.js app.
+`legacy-static-prototype/` está excluido del lint (ver los ignores de `eslint.config.mjs`) — es un mockup en HTML/CSS/JS plano que se conserva solo como referencia visual, no es parte de la app de Next.js.
 
-## Architecture
+## Arquitectura
 
-**Two separate route trees under one Next.js app:**
-- `/` — the internal admin panel the agency's team uses (sidebar + topbar + content library/overview/clients modules). Entirely driven by `src/components/app-shell.tsx`.
-- `/portal` and `/portal/[clienteId]` — a separate, stripped-down experience for the agency's *end clients*. No sidebar, no cross-client visibility. Clients live in Supabase now, not a static array, so there's no `generateStaticParams` — both portal routes are async Server Components that fetch from Supabase per request. Under `cacheComponents` (see Next.js gotcha below) that fetch can't happen directly in the page body, so each route is a thin wrapper (`page.tsx`, no `await`) around an inner async Server Component wrapped in `<Suspense>` (`portal-picker-content.tsx` / `[clienteId]/portal-client-content.tsx`) — this is the Partial Prerendering pattern `partialPrefetching: true` in `next.config.ts` is asking for.
+**Dos árboles de rutas separados bajo una sola app de Next.js:**
+- `/` — el panel admin interno que usa el equipo de la agencia (sidebar + topbar + módulos de biblioteca de contenido/resumen/clientes). Todo pasa por `src/components/app-shell.tsx`.
+- `/portal` y `/portal/[clienteId]` — una experiencia separada y reducida para los *clientes finales* de la agencia. Sin sidebar, sin visibilidad entre clientes. Los clientes ahora viven en Supabase, no en un array estático, así que no hay `generateStaticParams` — ambas rutas del portal son Server Components async que traen datos de Supabase por request. Bajo `cacheComponents` (ver el gotcha de Next.js más abajo) ese fetch no puede ir directo en el cuerpo de la página, así que cada ruta es un wrapper delgado (`page.tsx`, sin `await`) alrededor de un Server Component interno async envuelto en `<Suspense>` (`portal-picker-content.tsx` / `[clienteId]/portal-client-content.tsx`) — es el patrón de Partial Prerendering que pide `partialPrefetching: true` en `next.config.ts`.
 
-Both trees read/write the **same** Zustand stores, which are now thin wrappers over Supabase (fetch on mount, mutate via `supabase-js`) rather than plain in-memory arrays — e.g. approving content in `/portal` calls the `approve_content` RPC, which the admin panel's details panel picks up on its own next fetch. No auth: this is app-level convention (RPC instead of raw `UPDATE`), not identity-based security.
+Ambos árboles leen/escriben los **mismos** stores de Zustand, que ahora son envolturas delgadas sobre Supabase (fetch al montar, mutación vía `supabase-js`) en vez de arrays planos en memoria — por ejemplo, aprobar contenido en `/portal` llama la RPC `approve_content`, que el panel de detalles del admin recoge en su propio siguiente fetch. Sin autenticación: esto es convención a nivel app (RPC en vez de `UPDATE` directo), no seguridad por identidad.
 
-**Single `"use client"` boundary.** `src/components/app-shell.tsx` is the only client-boundary entry point for the admin tree; everything it imports is transitively part of the client bundle, so leaf components don't need their own `"use client"` directive unless they use `useState`/`useEffect` directly (several do, for local popup/open state — that's fine and intentional, not a boundary that needs removing).
+**Un solo límite `"use client"`.** `src/components/app-shell.tsx` es el único punto de entrada de client boundary para el árbol admin; todo lo que importa es transitivamente parte del bundle de cliente, así que los componentes hoja no necesitan su propio `"use client"` salvo que usen `useState`/`useEffect` directamente (varios lo hacen, para estado local de popups/apertura — eso está bien e intencional, no es un boundary que haya que quitar).
 
-**State is split into small Zustand stores by domain**, not one shared blob — `src/store/`:
-- `client-store.ts` — which client is active (`"all"` or a client id); scopes almost everything else. Unrelated to `clients-store.ts` below — this one just holds the current selection.
-- `clients-store.ts` — the list of clients, fetched from Supabase (`fetchClientes`); replaces the old static `CLIENTES` array.
-- `content-store.ts` — the content items, now async and Supabase-backed: `fetchContenidos`, `createContenido`/`updateContenido` (insert/update + `set_contenido_tags` RPC for tags), `deleteContenido`, `approveContenido`/`requestChanges` (the portal's actions, both RPCs) — same action names as the old in-memory version so call sites mostly just needed `await`.
-- `library-filters-store.ts` — search/estado/red/tipo/sort/view/calendar-month filters for the content library.
-- `ui-store.ts` — active module, sidebar collapsed/mobile-open, details panel visibility.
-- `modal-store.ts` — editor/preview modal open state + which content id (`string`/uuid, not `number`).
-- `toast-store.ts` — the one-off toast message.
+**El estado está dividido en varios stores de Zustand pequeños por dominio**, no un solo blob compartido — `src/store/`:
+- `client-store.ts` — qué cliente está activo (`"all"` o un id de cliente); acota casi todo lo demás. No tiene relación con `clients-store.ts` de abajo — este solo guarda la selección actual.
+- `clients-store.ts` — la lista de clientes, traída de Supabase (`fetchClientes`); reemplaza el viejo array estático `CLIENTES`.
+- `content-store.ts` — las piezas de contenido, ahora async y respaldadas por Supabase: `fetchContenidos`, `createContenido`/`updateContenido` (insert/update + la RPC `set_contenido_tags` para etiquetas), `deleteContenido`, `approveContenido`/`requestChanges` (las acciones del portal, ambas RPCs) — mismos nombres de acción que la versión en memoria anterior, así que los call sites casi solo necesitaron agregar `await`.
+- `library-filters-store.ts` — filtros de búsqueda/estado/red/tipo/orden/vista/mes del calendario para la biblioteca de contenido.
+- `ui-store.ts` — módulo activo, sidebar colapsado/abierto en móvil, visibilidad del panel de detalles.
+- `modal-store.ts` — estado abierto del editor/preview + qué id de contenido (`string`/uuid, ya no `number`).
+- `toast-store.ts` — el mensaje de toast puntual.
 
-  **Gotcha already hit once:** a Zustand selector must not allocate a new array/object every call (e.g. `useContentStore(s => s.contenidos.filter(...))`). That breaks `useSyncExternalStore`'s snapshot comparison and throws "The result of getSnapshot should be cached" at runtime (not caught by `tsc` or `next build`). Pattern used everywhere in this repo: select the raw array from the store, then derive with `useMemo` in the component body (see `src/hooks/use-filtered-content.ts` or `src/components/portal/portal-dashboard.tsx`).
+  **Gotcha ya identificado:** un selector de Zustand no debe asignar un array/objeto nuevo en cada llamada (ej. `useContentStore(s => s.contenidos.filter(...))`). Eso rompe la comparación de snapshot de `useSyncExternalStore` y tira "The result of getSnapshot should be cached" en runtime (no lo detecta `tsc` ni `next build`). Patrón usado en todo el repo: seleccionar el array crudo del store, y derivar con `useMemo` en el cuerpo del componente (ver `src/hooks/use-filtered-content.ts` o `src/components/portal/portal-dashboard.tsx`).
 
-**Data layer**: content and clients live in Supabase (`supabase/migrations/0001_init.sql` for the schema, `supabase/seed.sql` for the one real client — `supabase/seed-demo.sql` has the old 4 mockup clients as an optional, not-run-by-default dev fixture). `src/data/` now only holds what's genuinely static: `networks.ts` (social network metadata incl. lucide icon + brand color), `content-types.ts` (estado/formato/tipoEditorial/peso enums, mirrors the Postgres enums), `team.ts`, `nav-items.ts`, `placeholder-copy.ts`. `src/data/clients.ts` is a thin re-export over `clients-store.ts` + a `findCliente` lookup helper, kept only so existing imports didn't all need renaming. `src/lib/supabase/` (browser + server clients) and `src/lib/mappers/` (snake_case DB rows ↔ camelCase app types in `src/types/content.ts`) are the boundary between Postgres and the app. `src/types/database.ts` mirrors the DB row shapes by hand (no linked Supabase project to `supabase gen types` from in this environment).
+**Capa de datos**: el contenido y los clientes viven en Supabase (`supabase/migrations/0001_init.sql` para el esquema, `supabase/seed.sql` para el único cliente real — `supabase/seed-demo.sql` tiene los 4 clientes mockup viejos como fixture de desarrollo opcional, no se corre por defecto). `src/data/` ahora solo tiene lo que de verdad es estático: `networks.ts` (metadata de redes sociales, incl. ícono de lucide y color de marca), `content-types.ts` (enums de estado/formato/tipoEditorial/peso, refleja los enums de Postgres), `team.ts`, `nav-items.ts`, `placeholder-copy.ts`. `src/data/clients.ts` es un re-export delgado sobre `clients-store.ts` + un helper `findCliente`, se mantiene solo para no tener que renombrar todos los imports existentes. `src/lib/supabase/` (clientes de navegador y de servidor) y `src/lib/mappers/` (filas snake_case de la BD ↔ tipos camelCase de la app en `src/types/content.ts`) son el límite entre Postgres y la app. `src/types/database.ts` refleja a mano las formas de las filas de la BD (no hay proyecto de Supabase enlazado para generarlo con `supabase gen types` en este entorno).
 
-**Styling**: Tailwind v4, tokens defined as CSS custom properties in `src/app/globals.css` under `@theme` (bare `:root`) and redefined under `.dark` — not the media-query-only dark mode pattern. Theme switching is via `next-themes` (`attribute="class"`), wired in `src/components/theme-provider.tsx`. Don't use fractional Tailwind spacing utilities outside the standard scale (e.g. `h-8.5`, `mt-4.5` silently fail to generate) — use bracket arbitrary values (`h-[34px]`) instead.
+**Estilos**: Tailwind v4, tokens definidos como custom properties de CSS en `src/app/globals.css` bajo `@theme` (`:root` plano) y redefinidos bajo `.dark` — no el patrón de dark mode solo por media query. El cambio de tema es vía `next-themes` (`attribute="class"`), conectado en `src/components/theme-provider.tsx`. No usar utilidades de espaciado fraccionario de Tailwind fuera de la escala estándar (ej. `h-8.5`, `mt-4.5` no generan nada silenciosamente) — usar valores arbitrarios entre corchetes (`h-[34px]`) en su lugar.
 
-**Next.js version gotcha**: this project uses Next.js 16 with the experimental `cacheComponents: true` flag (see `next.config.ts`) — confirmed in `AGENTS.md` (auto-regenerated by `next dev`, safe to commit) that this version has breaking changes from what training data expects. Known friction points hit so far:
-- A dynamic route segment's `params` must be resolvable at build time (via `generateStaticParams`) or wrapped for streaming — an async Server Component that just `await`s `params` directly fails prerendering otherwise.
-- The `dynamicParams` route-segment export is rejected outright ("not compatible with cacheComponents") — don't add it.
-- More generally: **any** `fetch`/DB call in a Server Component's body that isn't wrapped in `<Suspense>` fails the build with "Next.js encountered uncached or runtime data during prerendering" — hit this on both `/portal` and `/portal/[clienteId]` once they started reading Supabase. Fixed by the wrapper-page + inner-async-component + `<Suspense>` split described above; `npm run build` confirms both routes come out as "Partial Prerender", which is the pattern to copy for any new Server Component that reads live data.
+**Gotcha de la versión de Next.js**: este proyecto usa Next.js 16 con el flag experimental `cacheComponents: true` (ver `next.config.ts`) — confirmado en `AGENTS.md` (se regenera solo con `next dev`, seguro de comitear) que esta versión tiene cambios que rompen lo que el training data esperaría. Puntos de friction ya encontrados:
+- Un segmento de ruta dinámico debe poder resolver sus `params` en build time (vía `generateStaticParams`) o envolverse para streaming — un Server Component async que simplemente `await`ea `params` directamente falla el prerenderizado si no.
+- El export de segmento de ruta `dynamicParams` se rechaza directamente ("not compatible with cacheComponents") — no lo agregues.
+- En general: **cualquier** `fetch`/llamada a BD en el cuerpo de un Server Component que no esté envuelta en `<Suspense>` hace fallar el build con "Next.js encountered uncached or runtime data during prerendering" — esto pasó tanto en `/portal` como en `/portal/[clienteId]` en cuanto empezaron a leer de Supabase. Se arregló con el patrón de wrapper-page + componente interno async + `<Suspense>` descrito arriba; `npm run build` confirma que ambas rutas salen como "Partial Prerender", que es el patrón a copiar para cualquier Server Component nuevo que lea datos en vivo.
 
-When in doubt about current Next.js APIs, check `node_modules/next/dist/docs/` rather than relying on training data.
+Ante la duda sobre APIs actuales de Next.js, revisar `node_modules/next/dist/docs/` en vez de confiar en el training data.
